@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rapider Data Governance &amp; Catalog</title>
+  <script src="https://kit.fontawesome.com/5b23df26dc.js" crossorigin="anonymous" defer></script>
+  <script src="/assets/js/rapider-components.js" defer></script>
+  <link rel="stylesheet" href="/assets/themes/rapider-tailwind-theme.css">
+  <link rel="stylesheet" href="/assets/themes/crm-expenses-design.css">
+  <style>
+    body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; }
+    iframe#appFrame { width: 100%; height: 100%; border: none; }
+  </style>
+</head>
+<body>
+  <iframe id="appFrame" src="pages/governance-posture/governance-posture.html"></iframe>
+  <script>
+    const routes = {
+  "governance-posture": "pages/governance-posture/governance-posture.html",
+  "asset-catalog": "pages/asset-catalog/asset-catalog.html",
+  "business-glossary": "pages/business-glossary/business-glossary.html",
+  "lineage-impact": "pages/lineage-impact/lineage-impact.html",
+  "data-quality-rules": "pages/data-quality-rules/data-quality-rules.html",
+  "quality-incidents": "pages/quality-incidents/quality-incidents.html",
+  "classifications-privacy": "pages/classifications-privacy/classifications-privacy.html",
+  "access-policies": "pages/access-policies/access-policies.html",
+  "stewardship-requests": "pages/stewardship-requests/stewardship-requests.html",
+  "catalog-asset-detail": "pages/catalog-asset-detail/catalog-asset-detail.html",
+  "glossary-term-detail": "pages/glossary-term-detail/glossary-term-detail.html",
+  "governance-editor-drawer": "pages/governance-editor-drawer/governance-editor-drawer.html"
+};
+    function handleHash() {
+      const hash = window.location.hash.replace(/^#\/?/, '').split('?')[0];
+      const route = hash || 'governance-posture';
+      const target = routes[route] || routes['governance-posture'];
+      const iframe = document.getElementById('appFrame');
+      if (iframe) iframe.src = target;
+    }
+    window.addEventListener('hashchange', handleHash);
+    window.addEventListener('load', handleHash);
+  </script>
+</body>
+</html>

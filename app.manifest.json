@@ -1,0 +1,4640 @@
+{
+  "name": "Rapider Data Governance & Catalog",
+  "key": "data-governance-and-catalog",
+  "domainKey": "DAT",
+  "appSuite": {
+    "key": "DAT",
+    "title": "Rapider Data & Analytics Suite"
+  },
+  "type": "App",
+  "description": "Data Governance & Catalog enterprise microapplication in the Rapider Data & Analytics Suite.",
+  "isPublic": true,
+  "tags": [
+    "dat",
+    "data-governance-and-catalog",
+    "top-200"
+  ],
+  "iconUrl": "fas fa-chart-bar",
+  "icon": "fas fa-chart-bar",
+  "route": "data-governance-and-catalog",
+  "rating": 5,
+  "reviewCount": 0,
+  "status": "app-metadata-completed",
+  "coverPage": "<!-- Rapider Official App SOW & Specification | App #100: Data Governance & Catalog (data-governance) | Domain: DAT -->\n\n# #100 Data Governance & Catalog (`data-governance`) — Scope of Work (SOW)\n\n- **App Number & Slug:** `#100` / `100-data-governance-and-catalog`\n- **Proposed Rapider App Key:** `data-governance`\n- **Suite / Domain Key:** `DAT` (Data, Analytics & Business Intelligence Suite — `Dat*` Canonical Prefix)\n- **Representative Product (`P1`):** Alation\n- **Combined Feature Catalog Reference:** [../combined-features/100-data-governance-and-catalog-features.md](../combined-features/100-data-governance-and-catalog-features.md)\n\n---\n\n## 1. Executive Outcome & Target Audience\n\n`data-governance` is the Active Metadata Catalog, Business Glossary, End-to-End Column Lineage, Data Quality Observability, Privacy Classification, and AI Context Governance control plane for the entire Rapider platform. Without centralized governance, analysts waste hours hunting for trustworthy tables, compliance officers cannot prove GDPR/HIPAA PII lineage, upstream ETL changes silently break executive dashboards, and conversational AI agents risk grounding responses on deprecated or restricted data. `data-governance` unifies discovery (`DatCatalogAsset`), semantic alignment (`DatBusinessGlossaryTerm`), lineage (`DatLineageEdge`), quality rules (`DatDataQualityRule`, `DatQualityIncident`), and active policy pushdown (`DatClassificationTag`, `DatDataAccessPolicy`, `DatStewardshipRequest`).\n\n- **SME Fast-Path Defaults:** Mid-sized organizations immediately get an auto-populated searchable catalog across all active Rapider suites (`CRM`, `FIN`, `HR`, `OPS`, `SUP`) and `DAT` tables, prebuilt PII/PCI/PHI sensitivity tags, out-of-the-box completeness/uniqueness checks, and clear `ENDORSED / DEPRECATED` badges without complex metamodel setup.\n- **Enterprise Progressive Disclosure:** Regulated enterprises unlock formal domain stewardship mapped to `HrDepartment` and `HrEmployee`, redlined glossary approval workflows via Home `WorkItem`s, automated column-level tag propagation over OpenLineage graphs, dynamic masking pushdown into `#099`/`#096`/`#097`, time-bound Data Product access shopping, GDPR Article 30 RoPA registers, and `AI_GROUNDING_APPROVED` context certification.\n- **Measurable Success Outcomes:**\n  - `100%` automated PII classification scan coverage across registered `#099` warehouse tables and `#098` sync streams.\n  - Sub-second downstream blast-radius impact calculation before breaking schema or metric changes deploy.\n  - Zero unapproved AI grounding on `DEPRECATED` or unmasked `RESTRICTED_PII` assets.\n- **Top 6 Global Benchmarks Synthesized:** `P1` Alation, `P2` Collibra Data Intelligence, `P3` Atlan, `P4` Microsoft Purview, `P5` Informatica CDGC, and `P6` SAP Datasphere Catalog & MDG.\n\n---\n\n## 2. In-Scope, Out-of-Scope & Suite Ownership Boundaries\n\n### In-Scope\n1. Active metadata catalog (`DatCatalogAsset`) indexing warehouse tables, BI dashboards/metrics, ETL pipelines, event schemas, and canonical Rapider suite collections with popularity rankings, trust flags, and `AI_GROUNDING_APPROVED` certification.\n2. Hierarchical Business Glossary (`DatBusinessGlossaryTerm`) with Steward redline review workflows and term-driven security policy inheritance.\n3. Automated technical and column-level lineage graphs (`DatLineageEdge`), blast-radius impact analysis, and upstream quality warning propagation.\n4. 6-dimension Data Quality rule authoring (`DatDataQualityRule`), `0–100%` `Decimal128` asset trust scoring, and incident triage (`DatQualityIncident`) integrated with Home `WorkItem`s.\n5. Sensitivity classification taxonomy (`DatClassificationTag`), centralized dynamic masking/row-access policy authoring (`DatDataAccessPolicy`), GDPR RoPA reporting, and time-bound Data Product access requests (`DatStewardshipRequest`).\n\n### Out-of-Scope\n1. Physical SQL query execution and compute cluster management — owned by `#099 Data Warehouse & Analytics Platform` (`data-warehouse`), which enforces `#100` policies at runtime.\n2. CDC extraction connectors and transformation pipeline execution — owned by `#098 Data Integration / ETL` (`data-integration`).\n3. Executive BI visual chart authoring and scheduled report subscriptions — owned by `#096 Business Intelligence & Dashboards` (`bi-dashboards`).\n4. Corporate HR organizational chart master maintenance — owned by `HR` (`employees`), referenced read-only via `HrDepartment` and `HrEmployee`.\n\n### Cross-Suite Ownership & Integration Contract\n\n| Domain / App | Owns (Single Source of Truth) | Integration Contract with `data-governance` (`#100`) |\n| :--- | :--- | :--- |\n| **`data-governance` (`#100`)** | `DatCatalogAsset`, `DatBusinessGlossaryTerm`, `DatLineageEdge`, `DatDataQualityRule`, `DatQualityIncident`, `DatClassificationTag`, `DatDataAccessPolicy`, `DatStewardshipRequest` | Publishes active metadata descriptions, PII classifications, dynamic masking policies, and trust/incident badges across t",
+  "scopeOfWork": "<!-- Rapider Official App SOW & Specification | App #100: Data Governance & Catalog (data-governance) | Domain: DAT -->\n\n# #100 Data Governance & Catalog (`data-governance`) — Scope of Work (SOW)\n\n- **App Number & Slug:** `#100` / `100-data-governance-and-catalog`\n- **Proposed Rapider App Key:** `data-governance`\n- **Suite / Domain Key:** `DAT` (Data, Analytics & Business Intelligence Suite — `Dat*` Canonical Prefix)\n- **Representative Product (`P1`):** Alation\n- **Combined Feature Catalog Reference:** [../combined-features/100-data-governance-and-catalog-features.md](../combined-features/100-data-governance-and-catalog-features.md)\n\n---\n\n## 1. Executive Outcome & Target Audience\n\n`data-governance` is the Active Metadata Catalog, Business Glossary, End-to-End Column Lineage, Data Quality Observability, Privacy Classification, and AI Context Governance control plane for the entire Rapider platform. Without centralized governance, analysts waste hours hunting for trustworthy tables, compliance officers cannot prove GDPR/HIPAA PII lineage, upstream ETL changes silently break executive dashboards, and conversational AI agents risk grounding responses on deprecated or restricted data. `data-governance` unifies discovery (`DatCatalogAsset`), semantic alignment (`DatBusinessGlossaryTerm`), lineage (`DatLineageEdge`), quality rules (`DatDataQualityRule`, `DatQualityIncident`), and active policy pushdown (`DatClassificationTag`, `DatDataAccessPolicy`, `DatStewardshipRequest`).\n\n- **SME Fast-Path Defaults:** Mid-sized organizations immediately get an auto-populated searchable catalog across all active Rapider suites (`CRM`, `FIN`, `HR`, `OPS`, `SUP`) and `DAT` tables, prebuilt PII/PCI/PHI sensitivity tags, out-of-the-box completeness/uniqueness checks, and clear `ENDORSED / DEPRECATED` badges without complex metamodel setup.\n- **Enterprise Progressive Disclosure:** Regulated enterprises unlock formal domain stewardship mapped to `HrDepartment` and `HrEmployee`, redlined glossary approval workflows via Home `WorkItem`s, automated column-level tag propagation over OpenLineage graphs, dynamic masking pushdown into `#099`/`#096`/`#097`, time-bound Data Product access shopping, GDPR Article 30 RoPA registers, and `AI_GROUNDING_APPROVED` context certification.\n- **Measurable Success Outcomes:**\n  - `100%` automated PII classification scan coverage across registered `#099` warehouse tables and `#098` sync streams.\n  - Sub-second downstream blast-radius impact calculation before breaking schema or metric changes deploy.\n  - Zero unapproved AI grounding on `DEPRECATED` or unmasked `RESTRICTED_PII` assets.\n- **Top 6 Global Benchmarks Synthesized:** `P1` Alation, `P2` Collibra Data Intelligence, `P3` Atlan, `P4` Microsoft Purview, `P5` Informatica CDGC, and `P6` SAP Datasphere Catalog & MDG.\n\n---\n\n## 2. In-Scope, Out-of-Scope & Suite Ownership Boundaries\n\n### In-Scope\n1. Active metadata catalog (`DatCatalogAsset`) indexing warehouse tables, BI dashboards/metrics, ETL pipelines, event schemas, and canonical Rapider suite collections with popularity rankings, trust flags, and `AI_GROUNDING_APPROVED` certification.\n2. Hierarchical Business Glossary (`DatBusinessGlossaryTerm`) with Steward redline review workflows and term-driven security policy inheritance.\n3. Automated technical and column-level lineage graphs (`DatLineageEdge`), blast-radius impact analysis, and upstream quality warning propagation.\n4. 6-dimension Data Quality rule authoring (`DatDataQualityRule`), `0–100%` `Decimal128` asset trust scoring, and incident triage (`DatQualityIncident`) integrated with Home `WorkItem`s.\n5. Sensitivity classification taxonomy (`DatClassificationTag`), centralized dynamic masking/row-access policy authoring (`DatDataAccessPolicy`), GDPR RoPA reporting, and time-bound Data Product access requests (`DatStewardshipRequest`).\n\n### Out-of-Scope\n1. Physical SQL query execution and compute cluster management — owned by `#099 Data Warehouse & Analytics Platform` (`data-warehouse`), which enforces `#100` policies at runtime.\n2. CDC extraction connectors and transformation pipeline execution — owned by `#098 Data Integration / ETL` (`data-integration`).\n3. Executive BI visual chart authoring and scheduled report subscriptions — owned by `#096 Business Intelligence & Dashboards` (`bi-dashboards`).\n4. Corporate HR organizational chart master maintenance — owned by `HR` (`employees`), referenced read-only via `HrDepartment` and `HrEmployee`.\n\n### Cross-Suite Ownership & Integration Contract\n\n| Domain / App | Owns (Single Source of Truth) | Integration Contract with `data-governance` (`#100`) |\n| :--- | :--- | :--- |\n| **`data-governance` (`#100`)** | `DatCatalogAsset`, `DatBusinessGlossaryTerm`, `DatLineageEdge`, `DatDataQualityRule`, `DatQualityIncident`, `DatClassificationTag`, `DatDataAccessPolicy`, `DatStewardshipRequest` | Publishes active metadata descriptions, PII classifications, dynamic masking policies, and trust/incident badges across the `DAT` suite. |\n| **`#099` Data Warehouse (`data-warehouse`)** | `DatDatabaseCatalog`, `DatWarehouseTable`, `DatQueryExecution` | Emits schema DDL changes & query popularity telemetry to `#100`; enforces `DatDataAccessPolicy` column masking and row filters at SQL runtime. |\n| **`#098` Data Integration (`data-integration`)** | `DatSyncPipeline`, `DatTransformationModel` | Streams column-level `DatLineageEdge` events and inline test failures (`DatQualityIncident`) into `#100`; honors `DatClassificationTag` upstream hashing rules. |\n| **`#096` BI & `#097` Product Analytics** | `DatSemanticModel`, `DatMetricDefinition`, `DatDashboard`, `DatEventPropertySchema` | Links metrics to `DatBusinessGlossaryTerm`; renders `#100` trust/incident banners on dashboards; gates conversational AI on `AI_GROUNDING_APPROVED` assets. |\n| **`HR` (`employees`)** | `HrDepartment`, `HrEmployee` | Read-only linkage for Domain Ownership (`HrDepartment`) and named Business Owners / Data Stewards (`HrEmployee`). |\n\n---\n\n## 3. Primary Web Pages & Sidebar Navigation Architecture (12 Pages)\n\nAll visible sidebar sections enforce **`>= 3` visible items (`displayOnMenu: true`)**, while detail views and drawers set `displayOnMenu: false`.\n\n| # | Route | Page Title | Sidebar Section | Menu Visible | Key Components & UX |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 1 | `governance-posture` | Governance & Trust Hub | `Catalog & Glossary` | `true` (Order 1) | Estate trust score (`Decimal128`), PII scan coverage `%`, open `DatQualityIncident` summary, `AI_GROUNDING_APPROVED` counter, `\"Ask Catalog\"` drawer launcher. |\n| 2 | `asset-catalog` | Data Catalog & Marketplace | `Catalog & Glossary` | `true` (Order 2) | Faceted `findSWR` search over `DatCatalogAsset`s (`TABLE`, `SEMANTIC_MODEL`, `DASHBOARD`, `PIPELINE`, `SUITE_ENTITY`), trust pills, `#activeFilterTagsBar` + `Clear all`, clickable asset name, icon+text `Edit`, icon-only `Delete`. |\n| 3 | `business-glossary` | Business Glossary | `Catalog & Glossary` | `true` (Order 3) | Domain-grouped `DatBusinessGlossaryTerm` directory with `APPROVED / UNDER_REVIEW / DRAFT` pills, linked metrics count, and `Propose Term` button. |\n| 4 | `lineage-impact` | Lineage & Impact Explorer | `Lineage & Quality` | `true` (Order 4) | Interactive column-level `DatLineageEdge` graph (`Source -> ETL -> Warehouse -> BI`), blast-radius simulator, and tabular lineage fallback. |\n| 5 | `data-quality-rules` | Data Quality Rules | `Lineage & Quality` | `true` (Order 5) | 6-dimension `DatDataQualityRule` catalog with `Decimal128` pass-rate sparklines, target asset links, and `\"Run Check Now\"` action. |\n| 6 | `quality-incidents` | Quality Incidents | `Lineage & Quality` | `true` (Order 6) | `DatQualityIncident` triage board (`<rapider-kanban>` + synchronized table view) across `OPEN -> INVESTIGATING -> MITIGATED -> RESOLVED` with `#activeFilterTagsBar`. |\n| 7 | `classifications-privacy` | PII Tags & RoPA Privacy | `Privacy & Access` | `true` (Order 7) | `DatClassificationTag` taxonomy, automated PII scanner findings queue, and GDPR Article 30 Record of Processing Activities (RoPA) exportable register. |\n| 8 | `access-policies` | Masking & Access Policies | `Privacy & Access` | `true` (Order 8) | Centralized `DatDataAccessPolicy` studio defining `FULL_REDACT`, `PARTIAL_MASK_LAST4`, `HASH_SHA256`, and row predicates pushed down to `#099`/`#096`. |\n| 9 | `stewardship-requests` | Access & Steward Requests | `Privacy & Access` | `true` (Order 9) | `DatStewardshipRequest` ledger tracking time-bound Data Product access grants (`expiresAt`), glossary change requests, and linked Home `WorkItem` statuses. |\n| 10 | `catalog-asset-detail` | Asset 360 Wiki & Column Profile | *(Hidden)* | `false` | Rich asset detail (`#/catalog-asset-detail?id=...`): Business/Technical Stewards, column dictionary + PII tags, trust score breakdown, mini-lineage, `\"Request Access\"`, and `Back to Catalog`. |\n| 11 | `glossary-term-detail` | Glossary Term & Linked Assets | *(Hidden)* | `false` | Canonical prose definition (`#/glossary-term-detail?id=...`), redline revision history, inherited `DatDataAccessPolicy`, linked `#096` metrics, and `projectChannelMessage` discussion. |\n| 12 | `governance-editor-drawer` | Glossary, Rule & Policy Drawer | *(Hidden)* | `false` | Sliding creation/edit drawer for `DatBusinessGlossaryTerm`, `DatDataQualityRule`, `DatDataAccessPolicy`, and `DatStewardshipRequest`; enforces `finally` button reset and `closePageDrawer()`. |\n\n---\n\n## 4. Canonical Data Models (`Dat*` — 8 Models)\n\nAll models omit `projectId`, use platform UUID `id` + optimistic `version`, store scores/thresholds as `Decimal128`, and use `00000000-xxxx-xxxx-xxxx-xxxxxxxxxxxx` seed UUIDs.\n\n| Model Name | Key Fields & Types | Relationships & External Refs | Invariants & Lifecycle |\n| :--- | :--- | :--- | :--- |\n| **`DatCatalogAsset`** | `id: UUID`, `qualifiedName: string`, `displayName: string`, `assetType: enum(WAREHOUSE_TABLE, BI_SEMANTIC_MODEL, BI_DASHBOARD, ETL_PIPELINE, PRODUCT_EVENT, RAPIDER_SUITE_ENTITY, DATA_PRODUCT)`, `externalRecordId: UUID?`, `domainDepartmentId: UUID?`, `businessOwnerId: UUID?`, `technicalStewardId: UUID?`, `trustStatus: enum(ENDORSED, UNVERIFIED, WARNING, DEPRECATED)`, `aiGroundingApproved: boolean`, `qualityScorePct: Decimal128`, `popularityScore30d: int`, `columnsMetadataJson: object[]`, `ropaMetadataJson: object?`, `version: int` | `domainDepartmentId -> HrDepartment.id`; `businessOwnerId, technicalStewardId -> HrEmployee.id`; `externalRecordId` links to `#096/#097/#098/#099` record UUID. | `qualifiedName` unique per workspace. `aiGroundingApproved` can only be `true` when `trustStatus === 'ENDORSED'` and zero unresolved `CRITICAL` `DatQualityIncident`s exist. |\n| **`DatBusinessGlossaryTerm`** | `id: UUID`, `termCode: string`, `name: string`, `synonyms: string[]`, `domainDepartmentId: UUID`, `definitionMarkdown: string`, `calculationGuidance: string?`, `defaultClassificationTagId: UUID?`, `status: enum(DRAFT, UNDER_REVIEW, APPROVED, RETIRED)`, `stewardEmployeeId: UUID`, `discussionChannelId: UUID?`, `version: int` | `domainDepartmentId -> HrDepartment.id`; `stewardEmployeeId -> HrEmployee.id`; `defaultClassificationTagId -> DatClassificationTag.id`; `discussionChannelId -> projectChannelMessage`. | Edits to an `APPROVED` term create a staged revision via `DatStewardshipRequest` until approved by `stewardEmployeeId`. |\n| **`DatLineageEdge`** | `id: UUID`, `sourceAssetId: UUID`, `sourceColumn: string?`, `targetAssetId: UUID`, `targetColumn: string?`, `transformationType: enum(DIRECT_COPY, EXPRESSION, AGGREGATION, HASHED_ANONYMIZED, FILTER_JOIN)`, `producerPipelineOrModelId: UUID?`, `lastObservedAt: datetime`, `version: int` | `sourceAssetId, targetAssetId -> DatCatalogAsset.id`. | Self-loops `(sourceAssetId === targetAssetId && sourceColumn === targetColumn)` are forbidden; `HASHED_ANONYMIZED` breaks raw PII sensitivity inheritance while preserving provenance trace. |\n| **`DatDataQualityRule`** | `id: UUID`, `ruleCode: string`, `name: string`, `assetId: UUID`, `targetColumn: string?`, `dimension: enum(COMPLETENESS, UNIQUENESS, VALIDITY, CONSISTENCY, TIMELINESS, VOLUME_ANOMALY)`, `predicateSpecJson: object`, `passThresholdPct: Decimal128`, `lastPassPct: Decimal128?`, `severity: enum(LOW, MEDIUM, HIGH, CRITICAL)`, `evaluationCron: string`, `isEnabled: boolean`, `version: int` | `assetId -> DatCatalogAsset.id`. | `passThresholdPct` bounded `0.00..100.00` (`Decimal128`). |\n| **`DatQualityIncident`** | `id: UUID`, `incidentNumber: string`, `ruleId: UUID?`, `assetId: UUID`, `severity: enum(LOW, MEDIUM, HIGH, CRITICAL)`, `status: enum(OPEN, INVESTIGATING, MITIGATED, RESOLVED, FALSE_POSITIVE)`, `observedValuePct: Decimal128`, `impactedAssetCount: int`, `rootCauseNotes: string?`, `assigneeStewardId: UUID?`, `activeWorkItemId: UUID?`, `discussionChannelId: UUID?`, `openedAt: datetime`, `resolvedAt: datetime?`, `version: int` | `ruleId -> DatDataQualityRule.id`; `assetId -> DatCatalogAsset.id`; `activeWorkItemId -> Platform WorkItem.id`; `discussionChannelId -> projectChannelMessage`. | Opening a `CRITICAL` incident automatically sets parent `DatCatalogAsset.trustStatus = 'WARNING'`, pauses `aiGroundingApproved`, and emits upstream warning events to `#096`. |\n| **`DatClassificationTag`** | `id: UUID`, `tagCode: string`, `name: string`, `sensitivityLevel: enum(PUBLIC, INTERNAL, CONFIDENTIAL, RESTRICTED_PII, RESTRICTED_PHI, RESTRICTED_PCI, FINANCIAL_MNPI)`, `detectorRegexes: string[]`, `autoPropagateLineage: boolean`, `defaultMaskingPolicyId: UUID?`, `version: int` | `defaultMaskingPolicyId -> DatDataAccessPolicy.id`. | System-seeded regulated tags (`RESTRICTED_PII`, `RESTRICTED_PHI`, `RESTRICTED_PCI`) cannot be hard-deleted. |\n| **`DatDataAccessPolicy`** | `id: UUID`, `policyCode: string`, `name: string`, `policyType: enum(COLUMN_MASKING, ROW_FILTER)`, `maskStrategy: enum(NONE, FULL_REDACT, PARTIAL_MASK_LAST4, HASH_SHA256, NULLIFY)?`, `rowPredicateJson: object?`, `boundTagIds: UUID[]`, `exemptRoleKeys: string[]`, `isEnabled: boolean`, `version: int` | `boundTagIds -> DatClassificationTag.id[]`; enforced by `#099`, `#096`, `#097`. | Policy updates increment `version` and immediately publish `dat.governance.access_policy.updated.v1` to invalidate downstream query/BI caches. |\n| **`DatStewardshipRequest`** | `id: UUID`, `requestNumber: string`, `requestType: enum(DATA_ACCESS_GRANT, GLOSSARY_APPROVAL, CLASSIFICATION_OVERRIDE, AI_GROUNDING_CERTIFICATION)`, `targetAssetId: UUID?`, `targetTermId: UUID?`, `requesterUserId: UUID`, `businessJustification: string`, `requestedDurationDays: int?`, `expiresAt: datetime?`, `status: enum(PENDING, APPROVED, REJECTED, EXPIRED, REVOKED)`, `reviewerUserId: UUID?`, `activeWorkItemId: UUID?`, `version: int` | `targetAssetId -> DatCatalogAsset.id`; `targetTermId -> DatBusinessGlossaryTerm.id`; `activeWorkItemId -> Platform WorkItem.id`. | `DATA_ACCESS_GRANT` approvals require `requestedDurationDays <= 365` and auto-transition to `EXPIRED` when `now >= expiresAt`. |\n\n---\n\n## 5. Core End-to-End User Journeys (5 Journeys)\n\n1. **Journey 1 — Automated PII Scan, Lineage Tag Propagation & Active Masking Pushdown:**\n   - `#098` lands a new table `RAW.customer_kyc` into `#099`. `#100` harvests the `DatCatalogAsset` (`DGC-001`) and runs `DatClassificationTag` detectors (`DGC-023`), tagging `national_id` and `iban` as `RESTRICTED_PII`.\n   - Through `DatLineageEdge` (`DGC-013`), `RESTRICTED_PII` automatically propagates to `MARTS.dim_customers.national_id`, binding the `PARTIAL_MASK_LAST4` `DatDataAccessPolicy` (`DGC-024`) and emitting `dat.governance.access_policy.updated.v1` so `#099` SQL worksheets and `#096` BI tiles mask the column immediately.\n2. **Journey 2 — Data Product Discovery & Time-Bound Access Grant via Home `WorkItem`:**\n   - A Revenue Analyst searches `\"Net ARR\"` on `asset-catalog`, filters by `Trust Status: \"ENDORSED\"` (`#activeFilterTagsBar` renders `Trust Status: \"ENDORSED\" ✕`), clicks `\"Enterprise Revenue Data Product\"` to open `#/catalog-asset-detail?id=...`, and clicks `\"Request 90-Day Read Access\"`.\n   - Submitting `governance-editor-drawer` creates a `DatStewardshipRequest` (`PENDING`) and dispatches a Rapider Home `WorkItem` to the Finance Business Owner (`HrEmployee`).\n   - Approving the `WorkItem` activates a 90-day read grant with `expiresAt` auto-revocation (`DGC-026`).\n3. **Journey 3 — Quality Incident Kanban Triage & Downstream BI Trust Banner:**\n   - A `UNIQUENESS` `DatDataQualityRule` on `MARTS.fact_subscriptions` drops from `100.00%` to `96.40%` (below `99.90%` `passThresholdPct`).\n   - `data-governance` opens a `CRITICAL` `DatQualityIncident`, moves `DatCatalogAsset.trustStatus` to `WARNING`, suspends `aiGroundingApproved`, creates a Steward Home `WorkItem`, and lights up an upstream warning badge on `#096` executive ARR dashboards (`DGC-015`).\n   - On `quality-incidents` (`<rapider-kanban>` + table), the Steward drags the incident card from `OPEN` to `INVESTIGATING` and then `RESOLVED` after `#098` deduplicates the feed, synchronously updating both kanban and table views.\n4. **Journey 4 — Breaking Change Blast-Radius Impact Check:**\n   - Before renaming `account_tier` in `#099`, an engineer opens `lineage-impact`, selects `MARTS.dim_accounts.account_tier`, and inspects the blast radius (`DGC-014`): 2 `#098` SQL models, 4 `#096` certified `DatMetricDefinition`s, and 3 executive `DatDashboard`s, notifying all 3 named Stewards prior to change.\n5. **Journey 5 — Business Glossary Stewardship & Grounded \"Ask Catalog\":**\n   - A user opens `\"Ask Catalog\"` (`projectChannelMessage`) on `governance-posture` and asks: *\"What is the official definition of Gross Churn and which table is certified for it?\"*\n   - The AI cites `DatBusinessGlossaryTerm` `TERM-CHURN-GROSS` (`APPROVED`) and `DatCatalogAsset` `MARTS.fact_mrr_movements` (`ENDORSED`, `qualityScorePct: 99.85%`), with clickable deep links.\n\n---\n\n## 6. Consolidated Feature Priorities & Work Packages (`P0`, `P1`, `P2`)\n\n### `P0` Foundation Work Packages\n- **`WP-P0-1` Unified Asset Catalog & Domain Stewardship (`DGC-001`, `DGC-002`, `DGC-003`):** Build `governance-posture`, `asset-catalog`, and `catalog-asset-detail` with popularity ranking, `HrDepartment`/`HrEmployee` ownership, and trust banners (`All Users` / `Data Steward`).\n- **`WP-P0-2` Business Glossary & Metric Alignment (`DGC-007`, `DGC-008`):** Build `business-glossary`, `glossary-term-detail`, and `governance-editor-drawer` linked to `#096` metrics and `#099` columns (`Data Steward`).\n- **`WP-P0-3` Column Lineage, Blast Radius & Quality Scorecards (`DGC-012`, `DGC-013`, `DGC-014`, `DGC-017`, `DGC-018`, `DGC-019`):** Build `lineage-impact`, `data-quality-rules`, and `quality-incidents` (`<rapider-kanban>` + table) with `Decimal128` trust scores and Home `WorkItem` escalation (`Data Engineer` / `Data Steward`).\n- **`WP-P0-4` PII Classification Taxonomy & Active Policy Pushdown (`DGC-023`, `DGC-024`):** Build `classifications-privacy` and `access-policies` pushing dynamic column masking and row filters to `#099`, `#096`, and `#097` (`Privacy Officer` / `Security Admin`).\n\n### `P1` Scale & Enterprise Governance Work Packages\n- **`WP-P1-1` Data Product Access Shopping, Active Sync & Expiry Revocation (`DGC-004`, `DGC-005`, `DGC-009`, `DGC-010`, `DGC-026`):** Build `stewardship-requests` with Home `WorkItem` routing, term-driven policy inheritance, bidirectional `#099/#096` tooltip sync, and automatic `expiresAt` grant revocation (`Data Steward`).\n- **`WP-P1-2` Upstream BI Incident Banners, Cross-Suite Audits, RoPA & Posture (`DGC-015`, `DGC-020`, `DGC-021`, `DGC-025`, `DGC-027`):** Live `#096` incident banners, cross-suite orphan audits, GDPR Article 30 RoPA register, and `projectChannelMessage` incident war rooms (`Privacy Officer` / `Data Steward`).\n\n### `P2` Adjacent & Grounded AI Work Packages\n- **`WP-P2-1` AI Context Readiness Gate & Regulatory Provenance (`DGC-006`, `DGC-016`):** `AI_GROUNDING_APPROVED` certification gating conversational AI across `DAT` and EU AI Act / SOX provenance exports (`AI Governance Lead`).\n- **`WP-P2-2` AI Auto-Documentation, Quality Recommender & \"Ask Catalog\" (`DGC-011`, `DGC-022`, `DGC-028`):** Draft column descriptions, candidate DQ rule recommendations, and grounded catalog discovery over `projectChannelMessage` (`Data Steward` / `All Users`).\n\n---\n\n## 7. Roles, Permissions & Field-Level Governance\n\n| Role | Permitted Actions | Restricted / Field-Level Boundaries |\n| :--- | :--- | :--- |\n| **`Catalog Consumer`** | Search `asset-catalog` and `business-glossary`, inspect permitted `lineage-impact` graphs, submit `DatStewardshipRequest` access requests, use `\"Ask Catalog\"`. | Metadata for `CONFIDENTIAL` executive schemas hidden unless discoverable; never sees raw data samples of masked columns. |\n| **`Domain Data Steward`** | Edit `DatCatalogAsset` documentation, approve `DatBusinessGlossaryTerm` revisions and `DATA_ACCESS_GRANT` `WorkItem`s in assigned `HrDepartment`, triage `DatQualityIncident`s. | Cannot weaken workspace-wide `DatDataAccessPolicy` masking strategies or delete `RESTRICTED_PII` tags. |\n| **`Data Quality Engineer`** | Author/schedule `DatDataQualityRule`s, run cross-suite integrity checks, manage `quality-incidents` `<rapider-kanban>` transitions. | Cannot grant user access to `RESTRICTED_PII` tables or modify RoPA legal basis fields. |\n| **`Privacy & Compliance Officer`** | Manage `DatClassificationTag` detectors, author `DatDataAccessPolicy` masking/row rules, maintain GDPR Article 30 RoPA metadata, certify `AI_GROUNDING_APPROVED`. | Every `CLASSIFICATION_OVERRIDE` downgrading a PII tag requires mandatory justification and writes an immutable audit log. |\n| **`Governance Admin`** | Configure automated catalog harvesters, domain operating hierarchies, and global retention/revocation schedules. | Cannot purge immutable stewardship approval or access grant audit trails. |\n\n---\n\n## 8. Technical APIs, Guarded Commands, Events & `requiredWorkflows`\n\n### Guarded Commands\n1. `dat.governance.harvestCatalogMetadata({ targetAppKeys, idempotencyKey, correlationId })` — Incrementally indexes schemas, metrics, pipelines, and popularity counters into `DatCatalogAsset`.\n2. `dat.governance.publishAccessPolicy({ policyId, expectedVersion, idempotencyKey, correlationId })` — Validates and activates `DatDataAccessPolicy`, emitting immediate cache-invalidation and policy-pushdown events.\n3. `dat.governance.evaluateQualityRules({ assetId, ruleIds, idempotencyKey, correlationId })` — Computes `Decimal128` pass rates, updates `DatCatalogAsset.qualityScorePct`, and opens/auto-resolves `DatQualityIncident`s.\n4. `dat.governance.decideStewardshipRequest({ requestId, decision: 'APPROVE' | 'REJECT' | 'REVOKE', reviewNotes, expectedVersion, idempotencyKey, correlationId })` — Executes Steward approval, provisions time-bound grant or glossary promotion, and closes the Home `WorkItem`.\n5. `dat.governance.certifyAiGrounding({ assetId, approved, expectedVersion, idempotencyKey, correlationId })` — Enforces precondition (`trustStatus === 'ENDORSED'` and zero open `CRITICAL` incidents) before enabling `aiGroundingApproved`.\n\n### Domain Events Published & Consumed (Kafka)\n- **Published:** `dat.governance.classification.updated.v1`, `dat.governance.access_policy.updated.v1`, `dat.governance.quality_incident.created.v1`, `dat.governance.quality_incident.resolved.v1`, `dat.governance.access_grant.provisioned.v1`, `dat.governance.access_grant.expired.v1`.\n- **Consumed:** `dat.etl.lineage.emitted.v1` (from `#098`), `dat.warehouse.schema.altered.v1` (from `#099`), `dat.bi.semantic_model.certified.v1` (from `#096`).\n\n### `requiredWorkflows`\n- `governanceMetadataHarvestAndPiiScanWorkflow` — Scheduled & event-driven metadata indexing, regex/heuristic PII tagging, and column-lineage propagation.\n- `governanceQualityObservabilityWorkflow` — Executes `DatDataQualityRule` schedules, recalculates trust scores, and escalates `CRITICAL` incidents to Home `WorkItem`s.\n- `governanceStewardshipApprovalWorkflow` — Routes access requests and glossary redlines through Domain Steward Home `WorkItem`s.\n- `governanceAccessGrantExpiryWorkflow` — Hourly sweep revoking expired `DatStewardshipRequest` grants (`expiresAt <= now`).\n\n### Grounded Rapider AI Governance Rules\n- Bulk AI column descriptions (`DGC-011`) and quality rule suggestions (`DGC-022`) are strictly persisted as `DRAFT` proposals requiring human Steward acceptance; `\"Ask Catalog\"` (`DGC-028`) never exposes sample row values and strictly respects catalog asset visibility ACLs.\n\n---\n\n## 9. Security, Privacy, Compliance & Non-Functional Requirements\n\n- **Regulatory Compliance (GDPR Art. 30, CCPA, HIPAA, SOX, EU AI Act):** Provides exportable RoPA inventories, automated PII/PHI/PCI tag propagation across lineage hops, verifiable time-bound access grants, and explicit AI dataset provenance records.\n- **Immutable Audit Ledger:** Every tag downgrade, masking policy edit, glossary approval, and data access grant/revocation is written to an append-only 7-year compliance audit log.\n- **Data Precision & Host Tenancy:** `Decimal128` used for all `qualityScorePct` and `passThresholdPct` calculations; zero `projectId` fields in any model.\n- **Accessibility & Responsive UX:** `<rapider-kanban>` on `quality-incidents` pairs with an accessible keyboard-navigable table view; WCAG 2.2 AA tabular fallback provided for `lineage-impact` graphs; `#ffffff !important` white text enforced on primary/danger buttons across `390px`, `768px`, and `1440px`.\n\n---\n\n## 10. Deterministic Acceptance Criteria (14 Testable Criteria)\n\n1. **AC-01 (Sidebar Minimum-3 Rule):** Visible sidebar sections (`Catalog & Glossary`: 3 items, `Lineage & Quality`: 3 items, `Privacy & Access`: 3 items) each contain `>= 3` `displayOnMenu: true` pages; `catalog-asset-detail`, `glossary-term-detail`, and `governance-editor-drawer` set `displayOnMenu: false`.\n2. **AC-02 (Rapider Kanban & Multi-View Sync):** `quality-incidents` uses `<rapider-kanban>` (never a custom plain-div mock board) synchronized with its table view; editing or dragging a `DatQualityIncident` updates in-memory state and re-renders both views optimistically without reload.\n3. **AC-03 (SWR Clean Queries & Defensive Filtering):** All 9 sidebar routes fetch data via `findSWR`/`countSWR` without client `isDeleted` where-clauses and filter `item.isDeleted !== true` in memory.\n4. **AC-04 (Table Actions & Click-Through Navigation):** Zero `\"View\"` buttons exist in `Actions` columns; clicking an asset name on `asset-catalog` navigates to `#/catalog-asset-detail?id=...` and clicking a term on `business-glossary` navigates to `#/glossary-term-detail?id=...` without `<base href>` 404 traps; `Edit` uses icon+text and `Delete` uses an icon-only button with `#rapiderConfirmOkBtn` modal confirmation.\n5. **AC-05 (Active Filter Tags & Clear All):** Entering a search term or toggling `ENDORSED / WARNING / DEPRECATED` pills on `asset-catalog` or `quality-incidents` displays `#activeFilterTagsBar` with HTML-escaped dismissible chips and `[Clear all]`.\n6. **AC-06 (Drawer Lifecycle & `finally` Reset):** Saving or cancelling in `governance-editor-drawer` restores button state inside `finally`, clears SWR caches, updates parent lists/kanban optimistically, and closes the drawer via `closePageDrawer()`.\n7. **AC-07 (Lineage PII Tag Propagation):** Adding a `DatLineageEdge` (`DIRECT_COPY` or `EXPRESSION`) from a column tagged `RESTRICTED_PII` (`autoPropagateLineage: true`) automatically applies `RESTRICTED_PII` to the downstream target column, whereas `HASHED_ANONYMIZED` preserves lineage provenance without propagating raw PII status.\n8. **AC-08 (Critical Quality Incident Circuit Breaker):** Opening a `CRITICAL` `DatQualityIncident` on an `ENDORSED` asset automatically transitions `trustStatus` to `WARNING`, sets `aiGroundingApproved = false`, creates a Steward Home `WorkItem`, and emits `dat.governance.quality_incident.created.v1`.\n9. **AC-09 (AI Grounding Precondition Guard):** Calling `dat.governance.certifyAiGrounding({ approved: true })` on an asset with `trustStatus !== 'ENDORSED'` or an open `CRITICAL` incident deterministically fails validation (`422`).\n10. **AC-10 (Policy Pushdown Cache Invalidation):** Updating a `DatDataAccessPolicy` emits `dat.governance.access_policy.updated.v1` so `#099` and `#096` immediately invalidate affected result caches.\n11. **AC-11 (Time-Bound Grant Auto-Expiry):** Executing `governanceAccessGrantExpiryWorkflow` transitions any `APPROVED` `DatStewardshipRequest` with `expiresAt <= now` to `EXPIRED` and emits `dat.governance.access_grant.expired.v1`.\n12. **AC-12 (`Decimal128` Score Precision):** `qualityScorePct` and `passThresholdPct` computations preserve exact `Decimal128` precision across rule aggregations.\n13. **AC-13 (Back Navigation Filter Preservation):** Navigating from `asset-catalog` (filtered by `Trust Status: \"ENDORSED\"`) to `catalog-asset-detail` and clicking `#btnGoBack` restores `asset-catalog` with `Trust Status: \"ENDORSED\"` intact.\n14. **AC-14 (Theme & Contrast Compliance):** All 12 routes pass light/dark `validate_theme` checks with `#ffffff !important` white text on primary/danger buttons and zero `window.alert`/`confirm`/`prompt` calls.\n",
+  "thumbnailUrl": "",
+  "isolationScope": "ENTERPRISE_SHARED",
+  "dataModels": [
+    {
+      "name": "DatDashboard",
+      "title": "Dashboard",
+      "description": "Deleting a dashboard soft-deletes child tiles and disables active `DatReportSubscription`s atomically.",
+      "domainName": "Rapider Data & Analytics Suite",
+      "domainKey": "DAT",
+      "datatableName": "DatDashboard",
+      "dataTableName": "DatDashboard",
+      "sqlTableName": "dat_dashboard",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ title }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "title",
+          "description",
+          "slug"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Dashboard, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "slug",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "collectionName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "globalFiltersSchemaJson",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "whatIfParametersJson",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "certificationStatus",
+          "type": "string",
+          "description": "Allowed values: DRAFT, PROMOTED, CERTIFIED, ARCHIVED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "DRAFT",
+            "PROMOTED",
+            "CERTIFIED",
+            "ARCHIVED"
+          ],
+          "options": [
+            "DRAFT",
+            "PROMOTED",
+            "CERTIFIED",
+            "ARCHIVED"
+          ]
+        },
+        {
+          "name": "starterPackKey",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "viewCount90d",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "discussionChannelId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ownerUserId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": []
+    },
+    {
+      "name": "DatDatabaseCatalog",
+      "title": "Database Catalog",
+      "description": "`(databaseName, schemaName)` unique per workspace; `timeTravelRetentionDays` bounded `0..90`.",
+      "domainName": "Rapider Data & Analytics Suite",
+      "domainKey": "DAT",
+      "datatableName": "DatDatabaseCatalog",
+      "dataTableName": "DatDatabaseCatalog",
+      "sqlTableName": "dat_database_catalog",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Database Catalog, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "databaseName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "schemaName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "environment",
+          "type": "string",
+          "description": "Allowed values: DEV, QA, PROD",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "DEV",
+            "QA",
+            "PROD"
+          ],
+          "options": [
+            "DEV",
+            "QA",
+            "PROD"
+          ]
+        },
+        {
+          "name": "layerType",
+          "type": "string",
+          "description": "Allowed values: RAW, STAGING, INTERMEDIATE, MARTS, SUITE_MIRROR",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "RAW",
+            "STAGING",
+            "INTERMEDIATE",
+            "MARTS",
+            "SUITE_MIRROR"
+          ],
+          "options": [
+            "RAW",
+            "STAGING",
+            "INTERMEDIATE",
+            "MARTS",
+            "SUITE_MIRROR"
+          ]
+        },
+        {
+          "name": "timeTravelRetentionDays",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "clonedFromCatalogId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ownerDepartmentId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "clonedFromCatalog",
+          "type": "belongsTo",
+          "sourceModel": "DatDatabaseCatalog",
+          "sourceField": "clonedFromCatalogId",
+          "targetModel": "DatDatabaseCatalog",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "DatDatabaseCatalog clonedFromCatalog foreign key link to DatDatabaseCatalog."
+        }
+      ]
+    },
+    {
+      "name": "DatEventPropertySchema",
+      "title": "Event Property Schema",
+      "description": "`eventName` unique per workspace. `BLOCKED` events are dropped at ingestion edge; `isPii: true` properties enforce hashing/redaction before storage.",
+      "domainName": "Rapider Data & Analytics Suite",
+      "domainKey": "DAT",
+      "datatableName": "DatEventPropertySchema",
+      "dataTableName": "DatEventPropertySchema",
+      "sqlTableName": "dat_event_property_schema",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Event Property Schema, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "eventName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "displayName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isCoreFeature",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "virtualRuleJson",
+          "type": "object",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "propertiesSchemaJson",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "governanceStatus",
+          "type": "string",
+          "description": "Allowed values: APPROVED, UNEXPECTED, QUARANTINED, DEPRECATED, BLOCKED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "APPROVED",
+            "UNEXPECTED",
+            "QUARANTINED",
+            "DEPRECATED",
+            "BLOCKED"
+          ],
+          "options": [
+            "APPROVED",
+            "UNEXPECTED",
+            "QUARANTINED",
+            "DEPRECATED",
+            "BLOCKED"
+          ]
+        },
+        {
+          "name": "ownerUserId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "activeWorkItemId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": []
+    },
+    {
+      "name": "DatMetricDefinition",
+      "title": "Metric Definition",
+      "description": "Monetary `targetValue` stored as `Decimal128`. Formula edits increment `version` and record an immutable formula audit snapshot so historical scorecard variance remains reproducible.",
+      "domainName": "Rapider Data & Analytics Suite",
+      "domainKey": "DAT",
+      "datatableName": "DatMetricDefinition",
+      "dataTableName": "DatMetricDefinition",
+      "sqlTableName": "dat_metric_definition",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Metric Definition, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "semanticModelId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "formulaExpression",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "aggregationType",
+          "type": "string",
+          "description": "Allowed values: SUM, AVG, COUNT_DISTINCT, RATIO, WINDOW_DELTA",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "SUM",
+            "AVG",
+            "COUNT_DISTINCT",
+            "RATIO",
+            "WINDOW_DELTA"
+          ],
+          "options": [
+            "SUM",
+            "AVG",
+            "COUNT_DISTINCT",
+            "RATIO",
+            "WINDOW_DELTA"
+          ]
+        },
+        {
+          "name": "unitType",
+          "type": "string",
+          "description": "Allowed values: CURRENCY, PERCENT, INTEGER, DECIMAL, DURATION_MS",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "CURRENCY",
+            "PERCENT",
+            "INTEGER",
+            "DECIMAL",
+            "DURATION_MS"
+          ],
+          "options": [
+            "CURRENCY",
+            "PERCENT",
+            "INTEGER",
+            "DECIMAL",
+            "DURATION_MS"
+          ]
+        },
+        {
+          "name": "currencyCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "targetValue",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "polarity",
+          "type": "string",
+          "description": "Allowed values: HIGHER_IS_BETTER, LOWER_IS_BETTER",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "HIGHER_IS_BETTER",
+            "LOWER_IS_BETTER"
+          ],
+          "options": [
+            "HIGHER_IS_BETTER",
+            "LOWER_IS_BETTER"
+          ]
+        },
+        {
+          "name": "certificationStatus",
+          "type": "string",
+          "description": "Allowed values: DRAFT, PROMOTED, CERTIFIED, DEPRECATED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "DRAFT",
+            "PROMOTED",
+            "CERTIFIED",
+            "DEPRECATED"
+          ],
+          "options": [
+            "DRAFT",
+            "PROMOTED",
+            "CERTIFIED",
+            "DEPRECATED"
+          ]
+        },
+        {
+          "name": "glossaryTermId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "semanticModel",
+          "type": "belongsTo",
+          "sourceModel": "DatMetricDefinition",
+          "sourceField": "semanticModelId",
+          "targetModel": "DatSemanticModel",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "DatMetricDefinition semanticModel foreign key link to DatSemanticModel."
+        }
+      ]
+    },
+    {
+      "name": "DatQueryExecution",
+      "title": "Query Execution",
+      "description": "Append-only audit log once terminal. Literal string parameters in `sqlPreviewRedacted` are scrubbed to avoid logging PII values in query history.",
+      "domainName": "Rapider Data & Analytics Suite",
+      "domainKey": "DAT",
+      "datatableName": "DatQueryExecution",
+      "dataTableName": "DatQueryExecution",
+      "sqlTableName": "dat_query_execution",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Query Execution, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "computeClusterId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "worksheetId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "callerAppKey",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "executedByUserId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "sqlFingerprint",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "sqlPreviewRedacted",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Allowed values: QUEUED, RUNNING, SUCCEEDED, CACHED_HIT, FAILED, ABORTED_TIMEOUT, ABORTED_SCAN_CAP, BLOCKED_QUOTA, CANCELED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "QUEUED",
+            "RUNNING",
+            "SUCCEEDED",
+            "CACHED_HIT",
+            "FAILED",
+            "ABORTED_TIMEOUT",
+            "ABORTED_SCAN_CAP",
+            "BLOCKED_QUOTA",
+            "CANCELED"
+          ],
+          "options": [
+            "QUEUED",
+            "RUNNING",
+            "SUCCEEDED",
+            "CACHED_HIT",
+            "FAILED",
+            "ABORTED_TIMEOUT",
+            "ABORTED_SCAN_CAP",
+            "BLOCKED_QUOTA",
+            "CANCELED"
+          ]
+        },
+        {
+          "name": "startedAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "completedAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "durationMs",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "bytesScanned",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "bytesSpilled",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "creditsConsumed",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "planSummaryJson",
+          "type": "object",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "idempotencyKey",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "computeCluster",
+          "type": "belongsTo",
+          "sourceModel": "DatQueryExecution",
+          "sourceField": "computeClusterId",
+          "targetModel": "DatComputeCluster",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "DatQueryExecution computeCluster foreign key link to DatComputeCluster."
+        }
+      ]
+    },
+    {
+      "name": "DatSemanticModel",
+      "title": "Semantic Model",
+      "description": "`code` unique per workspace. Every join must declare explicit cardinality (`ONE_TO_ONE`, `MANY_TO_ONE`) to block fan-out double counting. Transition to `CERTIFIED` requires Steward role via guarded command.",
+      "domainName": "Rapider Data & Analytics Suite",
+      "domainKey": "DAT",
+      "datatableName": "DatSemanticModel",
+      "dataTableName": "DatSemanticModel",
+      "sqlTableName": "dat_semantic_model",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name",
+          "code"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Semantic Model, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "code",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "sourceType",
+          "type": "string",
+          "description": "Allowed values: RAPIDER_SUITE, WAREHOUSE_TABLE, BLENDED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "RAPIDER_SUITE",
+            "WAREHOUSE_TABLE",
+            "BLENDED"
+          ],
+          "options": [
+            "RAPIDER_SUITE",
+            "WAREHOUSE_TABLE",
+            "BLENDED"
+          ]
+        },
+        {
+          "name": "entitiesJson",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "joinsJson",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "primaryGrain",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "executionMode",
+          "type": "string",
+          "description": "Allowed values: LIVE, CACHED_SNAPSHOT",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "LIVE",
+            "CACHED_SNAPSHOT"
+          ],
+          "options": [
+            "LIVE",
+            "CACHED_SNAPSHOT"
+          ]
+        },
+        {
+          "name": "refreshCron",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "lastRefreshedAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "certificationStatus",
+          "type": "string",
+          "description": "Allowed values: DRAFT, PROMOTED, CERTIFIED, ARCHIVED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "DRAFT",
+            "PROMOTED",
+            "CERTIFIED",
+            "ARCHIVED"
+          ],
+          "options": [
+            "DRAFT",
+            "PROMOTED",
+            "CERTIFIED",
+            "ARCHIVED"
+          ]
+        },
+        {
+          "name": "certifiedByUserId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": []
+    },
+    {
+      "name": "DatSyncPipeline",
+      "title": "Sync Pipeline",
+      "description": "`INCREMENTAL_UPSERT` and `LOG_BASED_CDC` require non-empty `primaryKeys` per enabled stream. Concurrent execution on the same `DatSyncPipeline.id` is mutually excluded via distributed lease.",
+      "domainName": "Rapider Data & Analytics Suite",
+      "domainKey": "DAT",
+      "datatableName": "DatSyncPipeline",
+      "dataTableName": "DatSyncPipeline",
+      "sqlTableName": "dat_sync_pipeline",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name",
+          "code"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Sync Pipeline, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "code",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "sourceConnectionId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "destinationTargetId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "syncMode",
+          "type": "string",
+          "description": "Allowed values: FULL_REFRESH, INCREMENTAL_APPEND, INCREMENTAL_UPSERT, LOG_BASED_CDC",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "FULL_REFRESH",
+            "INCREMENTAL_APPEND",
+            "INCREMENTAL_UPSERT",
+            "LOG_BASED_CDC"
+          ],
+          "options": [
+            "FULL_REFRESH",
+            "INCREMENTAL_APPEND",
+            "INCREMENTAL_UPSERT",
+            "LOG_BASED_CDC"
+          ]
+        },
+        {
+          "name": "historyModeScd2",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "streamsConfigJson",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "driftPolicy",
+          "type": "string",
+          "description": "Allowed values: AUTO_PROPAGATE_NEW, SAFE_WIDENING_ONLY, QUARANTINE_AND_PAUSE",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "AUTO_PROPAGATE_NEW",
+            "SAFE_WIDENING_ONLY",
+            "QUARANTINE_AND_PAUSE"
+          ],
+          "options": [
+            "AUTO_PROPAGATE_NEW",
+            "SAFE_WIDENING_ONLY",
+            "QUARANTINE_AND_PAUSE"
+          ]
+        },
+        {
+          "name": "scheduleCron",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "freshnessSlaMinutes",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "monthlyMarCap",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Allowed values: ACTIVE, PAUSED, BLOCKED_BY_DRIFT, ERROR",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "ACTIVE",
+            "PAUSED",
+            "BLOCKED_BY_DRIFT",
+            "ERROR"
+          ],
+          "options": [
+            "ACTIVE",
+            "PAUSED",
+            "BLOCKED_BY_DRIFT",
+            "ERROR"
+          ]
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "sourceConnection",
+          "type": "belongsTo",
+          "sourceModel": "DatSyncPipeline",
+          "sourceField": "sourceConnectionId",
+          "targetModel": "DatSourceConnection",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "DatSyncPipeline sourceConnection foreign key link to DatSourceConnection."
+        }
+      ]
+    },
+    {
+      "name": "DatTransformationModel",
+      "title": "Transformation Model",
+      "description": "Dependency graph across `upstreamModelIds` MUST be a strict DAG (cycle check enforced on save).",
+      "domainName": "Rapider Data & Analytics Suite",
+      "domainKey": "DAT",
+      "datatableName": "DatTransformationModel",
+      "dataTableName": "DatTransformationModel",
+      "sqlTableName": "dat_transformation_model",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name",
+          "code"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Transformation Model, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "code",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "modelType",
+          "type": "string",
+          "description": "Allowed values: SQL_DBT, VISUAL_PREP",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "SQL_DBT",
+            "VISUAL_PREP"
+          ],
+          "options": [
+            "SQL_DBT",
+            "VISUAL_PREP"
+          ]
+        },
+        {
+          "name": "materialization",
+          "type": "string",
+          "description": "Allowed values: VIEW, TABLE, INCREMENTAL",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "VIEW",
+            "TABLE",
+            "INCREMENTAL"
+          ],
+          "options": [
+            "VIEW",
+            "TABLE",
+            "INCREMENTAL"
+          ]
+        },
+        {
+          "name": "upstreamPipelineIds",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "upstreamModelIds",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "sqlOrPrepSpec",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "qualityTestsJson",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "gitRepositoryId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "gitCommitSha",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "targetWarehouseTableId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "lastRunStatus",
+          "type": "string",
+          "description": "Allowed values: NEVER_RUN, PASSED, FAILED_QUALITY, ERROR",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "NEVER_RUN",
+            "PASSED",
+            "FAILED_QUALITY",
+            "ERROR"
+          ],
+          "options": [
+            "NEVER_RUN",
+            "PASSED",
+            "FAILED_QUALITY",
+            "ERROR"
+          ]
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "upstreamPipelineIds",
+          "type": "belongsTo",
+          "sourceModel": "DatTransformationModel",
+          "sourceField": "upstreamPipelineIds",
+          "targetModel": "DatSyncPipeline",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "DatTransformationModel upstreamPipelineIds foreign key link to DatSyncPipeline."
+        }
+      ]
+    },
+    {
+      "name": "DatWarehouseTable",
+      "title": "Warehouse Table",
+      "description": "`(catalogId, tableName)` unique. `SUITE_SHORTCUT` tables are strictly read-only (`DML/DDL` mutations rejected). External Iceberg storage credentials must use `externalVaultRef` (zero plaintext keys).",
+      "domainName": "Rapider Data & Analytics Suite",
+      "domainKey": "DAT",
+      "datatableName": "DatWarehouseTable",
+      "dataTableName": "DatWarehouseTable",
+      "sqlTableName": "dat_warehouse_table",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Warehouse Table, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "catalogId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "tableName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "tableFormat",
+          "type": "string",
+          "description": "Allowed values: NATIVE_COLUMNAR, APACHE_ICEBERG, VIEW, DYNAMIC_TABLE, SUITE_SHORTCUT",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "NATIVE_COLUMNAR",
+            "APACHE_ICEBERG",
+            "VIEW",
+            "DYNAMIC_TABLE",
+            "SUITE_SHORTCUT"
+          ],
+          "options": [
+            "NATIVE_COLUMNAR",
+            "APACHE_ICEBERG",
+            "VIEW",
+            "DYNAMIC_TABLE",
+            "SUITE_SHORTCUT"
+          ]
+        },
+        {
+          "name": "columnsJson",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "partitionKeys",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "clusterKeys",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "targetLagMinutes",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "rowCount",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "compressedBytes",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "timeTravelBytes",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "externalVaultRef",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "lastRefreshedAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "catalog",
+          "type": "belongsTo",
+          "sourceModel": "DatWarehouseTable",
+          "sourceField": "catalogId",
+          "targetModel": "DatDatabaseCatalog",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "DatWarehouseTable catalog foreign key link to DatDatabaseCatalog."
+        }
+      ]
+    },
+    {
+      "name": "HrDepartment",
+      "title": "Department",
+      "description": "Organizational units within the company.",
+      "domainName": "Rapider HR & Talent Suite",
+      "domainKey": "HR",
+      "datatableName": "HrDepartment",
+      "dataTableName": "HrDepartment",
+      "sqlTableName": "hr_department",
+      "isolationScope": "ENTERPRISE_SHARED_WITH_CONFIDENTIAL_VAULTS",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name",
+          "code",
+          "description"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "name"
+          ],
+          "immutableFields": [],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "description"
+          ],
+          "additionalPrompt": "Ensure code is short uppercase.",
+          "requireUserConfirmation": false
+        },
+        "entityItemUpdate": {
+          "immutableFields": [],
+          "autoGenerateFields": [],
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "Department cannot be its own parent."
+        },
+        "entityRead": {
+          "defaultPageSize": 50,
+          "defaultContextLimit": 100
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "code",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "headId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "parentDepartmentId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "legalEntityId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "costCenterCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "head",
+          "type": "belongsTo",
+          "sourceModel": "HrDepartment",
+          "sourceField": "headId",
+          "targetModel": "HrEmployee",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Employee who heads this department."
+        },
+        {
+          "name": "parentDepartment",
+          "type": "belongsTo",
+          "sourceModel": "HrDepartment",
+          "sourceField": "parentDepartmentId",
+          "targetModel": "HrDepartment",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Parent department in the organizational hierarchy."
+        },
+        {
+          "name": "subDepartments",
+          "type": "hasMany",
+          "sourceModel": "HrDepartment",
+          "sourceField": "id",
+          "targetModel": "HrDepartment",
+          "targetField": "parentDepartmentId",
+          "throughModel": null,
+          "description": "Sub-departments under this department."
+        },
+        {
+          "name": "employees",
+          "type": "hasMany",
+          "sourceModel": "HrDepartment",
+          "sourceField": "id",
+          "targetModel": "HrEmployee",
+          "targetField": "departmentId",
+          "throughModel": null,
+          "description": "Employees in this department."
+        },
+        {
+          "name": "positions",
+          "type": "hasMany",
+          "sourceModel": "HrDepartment",
+          "sourceField": "id",
+          "targetModel": "HrPosition",
+          "targetField": "departmentId",
+          "throughModel": null,
+          "description": "Positions in this department."
+        }
+      ]
+    },
+    {
+      "name": "HrEmployee",
+      "title": "Employee",
+      "description": "Core profile representing an individual worker within the organization.",
+      "domainName": "Rapider HR & Talent Suite",
+      "domainKey": "HR",
+      "datatableName": "HrEmployee",
+      "dataTableName": "HrEmployee",
+      "sqlTableName": "hr_employee",
+      "isolationScope": "ENTERPRISE_SHARED_WITH_CONFIDENTIAL_VAULTS",
+      "titleFieldTemplate": "{{ firstName }} {{ lastName }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "firstName",
+          "lastName",
+          "email",
+          "jobTitle",
+          "employeeNumber"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "firstName",
+            "lastName",
+            "email",
+            "status"
+          ],
+          "immutableFields": [],
+          "requiredRelations": [],
+          "autoGenerateFields": [],
+          "additionalPrompt": "Ensure the email address is formatted correctly. If a department is mentioned, link the employee to the correct departmentId.",
+          "requireUserConfirmation": true,
+          "customValidationPrompt": "If status is 'Active', a hireDate must be provided or assumed as today."
+        },
+        "entityItemUpdate": {
+          "immutableFields": [],
+          "autoGenerateFields": [],
+          "additionalPrompt": "When updating manager or department, suggest creating a Lifecycle Event.",
+          "requireUserConfirmation": true,
+          "customValidationPrompt": "Ensure the employee is not set as their own manager.",
+          "restrictedStates": [
+            {
+              "description": "Cannot update terminated employees without authorization.",
+              "where": {}
+            }
+          ]
+        },
+        "entityRead": {
+          "defaultPageSize": 50,
+          "defaultContextLimit": 100,
+          "hiddenFields": [
+            "ssn"
+          ],
+          "maskedFields": [
+            "personalEmail",
+            "phone"
+          ],
+          "additionalPrompt": "Always show job title, department, and status."
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [
+            "lifecycleEvents",
+            "documents",
+            "emergencyContacts"
+          ],
+          "restrictedStates": [
+            {
+              "description": "Active employees must be terminated before deletion.",
+              "where": {}
+            }
+          ]
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "employeeNumber",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "firstName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "lastName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "preferredName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "email",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "personalEmail",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "phone",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "jobTitle",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "workerType",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "employmentType",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "hireDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "startDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "endDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "departmentId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "managerId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "positionId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "jobProfileId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "locationId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "legalEntityId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "weeklyHours",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "timeZone",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "avatarColor",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "notes",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "department",
+          "type": "belongsTo",
+          "sourceModel": "HrEmployee",
+          "sourceField": "departmentId",
+          "targetModel": "HrDepartment",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Department this employee belongs to."
+        },
+        {
+          "name": "manager",
+          "type": "belongsTo",
+          "sourceModel": "HrEmployee",
+          "sourceField": "managerId",
+          "targetModel": "HrEmployee",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Manager this employee reports to."
+        },
+        {
+          "name": "position",
+          "type": "belongsTo",
+          "sourceModel": "HrEmployee",
+          "sourceField": "positionId",
+          "targetModel": "HrPosition",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Specific position this employee holds."
+        },
+        {
+          "name": "jobProfile",
+          "type": "belongsTo",
+          "sourceModel": "HrEmployee",
+          "sourceField": "jobProfileId",
+          "targetModel": "HrJobProfile",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Job profile associated with this employee."
+        },
+        {
+          "name": "location",
+          "type": "belongsTo",
+          "sourceModel": "HrEmployee",
+          "sourceField": "locationId",
+          "targetModel": "HrLocation",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Work location of this employee."
+        },
+        {
+          "name": "legalEntity",
+          "type": "belongsTo",
+          "sourceModel": "HrEmployee",
+          "sourceField": "legalEntityId",
+          "targetModel": "FinLegalEntity",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Legal entity employing this person."
+        },
+        {
+          "name": "lifecycleEvents",
+          "type": "hasMany",
+          "sourceModel": "HrEmployee",
+          "sourceField": "id",
+          "targetModel": "HrLifecycleEvent",
+          "targetField": "employeeId",
+          "throughModel": null,
+          "description": "Lifecycle events for this employee."
+        },
+        {
+          "name": "changeRequests",
+          "type": "hasMany",
+          "sourceModel": "HrEmployee",
+          "sourceField": "id",
+          "targetModel": "HrChangeRequest",
+          "targetField": "employeeId",
+          "throughModel": null,
+          "description": "Pending and past change requests for this employee."
+        },
+        {
+          "name": "documents",
+          "type": "hasMany",
+          "sourceModel": "HrEmployee",
+          "sourceField": "id",
+          "targetModel": "HrDocumentRef",
+          "targetField": "employeeId",
+          "throughModel": null,
+          "description": "Uploaded compliance and employment documents."
+        },
+        {
+          "name": "emergencyContacts",
+          "type": "hasMany",
+          "sourceModel": "HrEmployee",
+          "sourceField": "id",
+          "targetModel": "HrEmergencyContact",
+          "targetField": "employeeId",
+          "throughModel": null,
+          "description": "Emergency contacts."
+        },
+        {
+          "name": "directReports",
+          "type": "hasMany",
+          "sourceModel": "HrEmployee",
+          "sourceField": "id",
+          "targetModel": "HrEmployee",
+          "targetField": "managerId",
+          "throughModel": null,
+          "description": "Direct reports who report to this manager."
+        }
+      ]
+    },
+    {
+      "name": "DatCatalogAsset",
+      "title": "Catalog Asset",
+      "description": "`qualifiedName` unique per workspace. `aiGroundingApproved` can only be `true` when `trustStatus === 'ENDORSED'` and zero unresolved `CRITICAL` `DatQualityIncident`s exist.",
+      "domainName": "Rapider Data & Analytics Suite",
+      "domainKey": "DAT",
+      "datatableName": "DatCatalogAsset",
+      "dataTableName": "DatCatalogAsset",
+      "sqlTableName": "dat_catalog_asset",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Catalog Asset, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "qualifiedName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "displayName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "assetType",
+          "type": "string",
+          "description": "Allowed values: WAREHOUSE_TABLE, BI_SEMANTIC_MODEL, BI_DASHBOARD, ETL_PIPELINE, PRODUCT_EVENT, RAPIDER_SUITE_ENTITY, DATA_PRODUCT",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "WAREHOUSE_TABLE",
+            "BI_SEMANTIC_MODEL",
+            "BI_DASHBOARD",
+            "ETL_PIPELINE",
+            "PRODUCT_EVENT",
+            "RAPIDER_SUITE_ENTITY",
+            "DATA_PRODUCT"
+          ],
+          "options": [
+            "WAREHOUSE_TABLE",
+            "BI_SEMANTIC_MODEL",
+            "BI_DASHBOARD",
+            "ETL_PIPELINE",
+            "PRODUCT_EVENT",
+            "RAPIDER_SUITE_ENTITY",
+            "DATA_PRODUCT"
+          ]
+        },
+        {
+          "name": "externalRecordId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "domainDepartmentId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "businessOwnerId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "technicalStewardId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "trustStatus",
+          "type": "string",
+          "description": "Allowed values: ENDORSED, UNVERIFIED, WARNING, DEPRECATED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "ENDORSED",
+            "UNVERIFIED",
+            "WARNING",
+            "DEPRECATED"
+          ],
+          "options": [
+            "ENDORSED",
+            "UNVERIFIED",
+            "WARNING",
+            "DEPRECATED"
+          ]
+        },
+        {
+          "name": "aiGroundingApproved",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "qualityScorePct",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "popularityScore30d",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "columnsMetadataJson",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "ropaMetadataJson",
+          "type": "object",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "domainDepartment",
+          "type": "belongsTo",
+          "sourceModel": "DatCatalogAsset",
+          "sourceField": "domainDepartmentId",
+          "targetModel": "HrDepartment",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "DatCatalogAsset domainDepartment foreign key link to HrDepartment."
+        }
+      ]
+    },
+    {
+      "name": "DatBusinessGlossaryTerm",
+      "title": "Business Glossary Term",
+      "description": "Edits to an `APPROVED` term create a staged revision via `DatStewardshipRequest` until approved by `stewardEmployeeId`.",
+      "domainName": "Rapider Data & Analytics Suite",
+      "domainKey": "DAT",
+      "datatableName": "DatBusinessGlossaryTerm",
+      "dataTableName": "DatBusinessGlossaryTerm",
+      "sqlTableName": "dat_business_glossary_term",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Business Glossary Term, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "termCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "synonyms",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "domainDepartmentId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "definitionMarkdown",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "calculationGuidance",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "defaultClassificationTagId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Allowed values: DRAFT, UNDER_REVIEW, APPROVED, RETIRED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "DRAFT",
+            "UNDER_REVIEW",
+            "APPROVED",
+            "RETIRED"
+          ],
+          "options": [
+            "DRAFT",
+            "UNDER_REVIEW",
+            "APPROVED",
+            "RETIRED"
+          ]
+        },
+        {
+          "name": "stewardEmployeeId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "discussionChannelId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "domainDepartment",
+          "type": "belongsTo",
+          "sourceModel": "DatBusinessGlossaryTerm",
+          "sourceField": "domainDepartmentId",
+          "targetModel": "HrDepartment",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "DatBusinessGlossaryTerm domainDepartment foreign key link to HrDepartment."
+        }
+      ]
+    },
+    {
+      "name": "DatLineageEdge",
+      "title": "Lineage Edge",
+      "description": "Self-loops `(sourceAssetId === targetAssetId && sourceColumn === targetColumn)` are forbidden; `HASHED_ANONYMIZED` breaks raw PII sensitivity inheritance while preserving provenance trace.",
+      "domainName": "Rapider Data & Analytics Suite",
+      "domainKey": "DAT",
+      "datatableName": "DatLineageEdge",
+      "dataTableName": "DatLineageEdge",
+      "sqlTableName": "dat_lineage_edge",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Lineage Edge, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "sourceAssetId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "sourceColumn",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "targetAssetId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "targetColumn",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "transformationType",
+          "type": "string",
+          "description": "Allowed values: DIRECT_COPY, EXPRESSION, AGGREGATION, HASHED_ANONYMIZED, FILTER_JOIN",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "DIRECT_COPY",
+            "EXPRESSION",
+            "AGGREGATION",
+            "HASHED_ANONYMIZED",
+            "FILTER_JOIN"
+          ],
+          "options": [
+            "DIRECT_COPY",
+            "EXPRESSION",
+            "AGGREGATION",
+            "HASHED_ANONYMIZED",
+            "FILTER_JOIN"
+          ]
+        },
+        {
+          "name": "producerPipelineOrModelId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "lastObservedAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "sourceAssetId, targetAsset",
+          "type": "belongsTo",
+          "sourceModel": "DatLineageEdge",
+          "sourceField": "sourceAssetId, targetAssetId",
+          "targetModel": "DatCatalogAsset",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "DatLineageEdge sourceAssetId, targetAsset foreign key link to DatCatalogAsset."
+        }
+      ]
+    },
+    {
+      "name": "DatDataQualityRule",
+      "title": "Data Quality Rule",
+      "description": "`passThresholdPct` bounded `0.00..100.00` (`Decimal128`).",
+      "domainName": "Rapider Data & Analytics Suite",
+      "domainKey": "DAT",
+      "datatableName": "DatDataQualityRule",
+      "dataTableName": "DatDataQualityRule",
+      "sqlTableName": "dat_data_quality_rule",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Data Quality Rule, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "ruleCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "assetId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "targetColumn",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "dimension",
+          "type": "string",
+          "description": "Allowed values: COMPLETENESS, UNIQUENESS, VALIDITY, CONSISTENCY, TIMELINESS, VOLUME_ANOMALY",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "COMPLETENESS",
+            "UNIQUENESS",
+            "VALIDITY",
+            "CONSISTENCY",
+            "TIMELINESS",
+            "VOLUME_ANOMALY"
+          ],
+          "options": [
+            "COMPLETENESS",
+            "UNIQUENESS",
+            "VALIDITY",
+            "CONSISTENCY",
+            "TIMELINESS",
+            "VOLUME_ANOMALY"
+          ]
+        },
+        {
+          "name": "predicateSpecJson",
+          "type": "object",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "passThresholdPct",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "lastPassPct",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "severity",
+          "type": "string",
+          "description": "Allowed values: LOW, MEDIUM, HIGH, CRITICAL",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "LOW",
+            "MEDIUM",
+            "HIGH",
+            "CRITICAL"
+          ],
+          "options": [
+            "LOW",
+            "MEDIUM",
+            "HIGH",
+            "CRITICAL"
+          ]
+        },
+        {
+          "name": "evaluationCron",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isEnabled",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "asset",
+          "type": "belongsTo",
+          "sourceModel": "DatDataQualityRule",
+          "sourceField": "assetId",
+          "targetModel": "DatCatalogAsset",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "DatDataQualityRule asset foreign key link to DatCatalogAsset."
+        }
+      ]
+    },
+    {
+      "name": "DatQualityIncident",
+      "title": "Quality Incident",
+      "description": "Opening a `CRITICAL` incident automatically sets parent `DatCatalogAsset.trustStatus = 'WARNING'`, pauses `aiGroundingApproved`, and emits upstream warning events to `#096`.",
+      "domainName": "Rapider Data & Analytics Suite",
+      "domainKey": "DAT",
+      "datatableName": "DatQualityIncident",
+      "dataTableName": "DatQualityIncident",
+      "sqlTableName": "dat_quality_incident",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Quality Incident, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "incidentNumber",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ruleId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "assetId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "severity",
+          "type": "string",
+          "description": "Allowed values: LOW, MEDIUM, HIGH, CRITICAL",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "LOW",
+            "MEDIUM",
+            "HIGH",
+            "CRITICAL"
+          ],
+          "options": [
+            "LOW",
+            "MEDIUM",
+            "HIGH",
+            "CRITICAL"
+          ]
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Allowed values: OPEN, INVESTIGATING, MITIGATED, RESOLVED, FALSE_POSITIVE",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "OPEN",
+            "INVESTIGATING",
+            "MITIGATED",
+            "RESOLVED",
+            "FALSE_POSITIVE"
+          ],
+          "options": [
+            "OPEN",
+            "INVESTIGATING",
+            "MITIGATED",
+            "RESOLVED",
+            "FALSE_POSITIVE"
+          ]
+        },
+        {
+          "name": "observedValuePct",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "impactedAssetCount",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "rootCauseNotes",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "assigneeStewardId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "activeWorkItemId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "discussionChannelId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "openedAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "resolvedAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "rule",
+          "type": "belongsTo",
+          "sourceModel": "DatQualityIncident",
+          "sourceField": "ruleId",
+          "targetModel": "DatDataQualityRule",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "DatQualityIncident rule foreign key link to DatDataQualityRule."
+        }
+      ]
+    },
+    {
+      "name": "DatClassificationTag",
+      "title": "Classification Tag",
+      "description": "System-seeded regulated tags (`RESTRICTED_PII`, `RESTRICTED_PHI`, `RESTRICTED_PCI`) cannot be hard-deleted.",
+      "domainName": "Rapider Data & Analytics Suite",
+      "domainKey": "DAT",
+      "datatableName": "DatClassificationTag",
+      "dataTableName": "DatClassificationTag",
+      "sqlTableName": "dat_classification_tag",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Classification Tag, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "tagCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "sensitivityLevel",
+          "type": "string",
+          "description": "Allowed values: PUBLIC, INTERNAL, CONFIDENTIAL, RESTRICTED_PII, RESTRICTED_PHI, RESTRICTED_PCI, FINANCIAL_MNPI",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "PUBLIC",
+            "INTERNAL",
+            "CONFIDENTIAL",
+            "RESTRICTED_PII",
+            "RESTRICTED_PHI",
+            "RESTRICTED_PCI",
+            "FINANCIAL_MNPI"
+          ],
+          "options": [
+            "PUBLIC",
+            "INTERNAL",
+            "CONFIDENTIAL",
+            "RESTRICTED_PII",
+            "RESTRICTED_PHI",
+            "RESTRICTED_PCI",
+            "FINANCIAL_MNPI"
+          ]
+        },
+        {
+          "name": "detectorRegexes",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "autoPropagateLineage",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "defaultMaskingPolicyId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "defaultMaskingPolicy",
+          "type": "belongsTo",
+          "sourceModel": "DatClassificationTag",
+          "sourceField": "defaultMaskingPolicyId",
+          "targetModel": "DatDataAccessPolicy",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "DatClassificationTag defaultMaskingPolicy foreign key link to DatDataAccessPolicy."
+        }
+      ]
+    },
+    {
+      "name": "DatDataAccessPolicy",
+      "title": "Data Access Policy",
+      "description": "Policy updates increment `version` and immediately publish `dat.governance.access_policy.updated.v1` to invalidate downstream query/BI caches.",
+      "domainName": "Rapider Data & Analytics Suite",
+      "domainKey": "DAT",
+      "datatableName": "DatDataAccessPolicy",
+      "dataTableName": "DatDataAccessPolicy",
+      "sqlTableName": "dat_data_access_policy",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Data Access Policy, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "policyCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "policyType",
+          "type": "string",
+          "description": "Allowed values: COLUMN_MASKING, ROW_FILTER",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "COLUMN_MASKING",
+            "ROW_FILTER"
+          ],
+          "options": [
+            "COLUMN_MASKING",
+            "ROW_FILTER"
+          ]
+        },
+        {
+          "name": "maskStrategy",
+          "type": "string",
+          "description": "Allowed values: NONE, FULL_REDACT, PARTIAL_MASK_LAST4, HASH_SHA256, NULLIFY",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "NONE",
+            "FULL_REDACT",
+            "PARTIAL_MASK_LAST4",
+            "HASH_SHA256",
+            "NULLIFY"
+          ],
+          "options": [
+            "NONE",
+            "FULL_REDACT",
+            "PARTIAL_MASK_LAST4",
+            "HASH_SHA256",
+            "NULLIFY"
+          ]
+        },
+        {
+          "name": "rowPredicateJson",
+          "type": "object",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "boundTagIds",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "exemptRoleKeys",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "isEnabled",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "boundTagIds",
+          "type": "belongsTo",
+          "sourceModel": "DatDataAccessPolicy",
+          "sourceField": "boundTagIds",
+          "targetModel": "DatClassificationTag",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "DatDataAccessPolicy boundTagIds foreign key link to DatClassificationTag."
+        }
+      ]
+    },
+    {
+      "name": "DatStewardshipRequest",
+      "title": "Stewardship Request",
+      "description": "`DATA_ACCESS_GRANT` approvals require `requestedDurationDays <= 365` and auto-transition to `EXPIRED` when `now >= expiresAt`.",
+      "domainName": "Rapider Data & Analytics Suite",
+      "domainKey": "DAT",
+      "datatableName": "DatStewardshipRequest",
+      "dataTableName": "DatStewardshipRequest",
+      "sqlTableName": "dat_stewardship_request",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Stewardship Request, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "requestNumber",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "requestType",
+          "type": "string",
+          "description": "Allowed values: DATA_ACCESS_GRANT, GLOSSARY_APPROVAL, CLASSIFICATION_OVERRIDE, AI_GROUNDING_CERTIFICATION",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "DATA_ACCESS_GRANT",
+            "GLOSSARY_APPROVAL",
+            "CLASSIFICATION_OVERRIDE",
+            "AI_GROUNDING_CERTIFICATION"
+          ],
+          "options": [
+            "DATA_ACCESS_GRANT",
+            "GLOSSARY_APPROVAL",
+            "CLASSIFICATION_OVERRIDE",
+            "AI_GROUNDING_CERTIFICATION"
+          ]
+        },
+        {
+          "name": "targetAssetId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "targetTermId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "requesterUserId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "businessJustification",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "requestedDurationDays",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "expiresAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Allowed values: PENDING, APPROVED, REJECTED, EXPIRED, REVOKED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "PENDING",
+            "APPROVED",
+            "REJECTED",
+            "EXPIRED",
+            "REVOKED"
+          ],
+          "options": [
+            "PENDING",
+            "APPROVED",
+            "REJECTED",
+            "EXPIRED",
+            "REVOKED"
+          ]
+        },
+        {
+          "name": "reviewerUserId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "activeWorkItemId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "targetAsset",
+          "type": "belongsTo",
+          "sourceModel": "DatStewardshipRequest",
+          "sourceField": "targetAssetId",
+          "targetModel": "DatCatalogAsset",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "DatStewardshipRequest targetAsset foreign key link to DatCatalogAsset."
+        }
+      ]
+    }
+  ],
+  "webPages": [
+    {
+      "name": "Governance & Trust Hub",
+      "route": "governance-posture",
+      "htmlFilePath": "pages/governance-posture/governance-posture.html",
+      "title": "Governance & Trust Hub",
+      "group": "Catalog & Glossary",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": true,
+      "order": 1,
+      "developmentDetails": "Estate trust score (Decimal128), PII scan coverage %, open DatQualityIncident summary, AI_GROUNDING_APPROVED counter, \"Ask Catalog\" drawer launcher."
+    },
+    {
+      "name": "Data Catalog & Marketplace",
+      "route": "asset-catalog",
+      "htmlFilePath": "pages/asset-catalog/asset-catalog.html",
+      "title": "Data Catalog & Marketplace",
+      "group": "Catalog & Glossary",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": true,
+      "order": 2,
+      "developmentDetails": "Faceted findSWR search over DatCatalogAssets (TABLE, SEMANTIC_MODEL, DASHBOARD, PIPELINE, SUITE_ENTITY), trust pills, #activeFilterTagsBar + Clear all, clickable asset name, icon+text Edit, icon-only Delete."
+    },
+    {
+      "name": "Business Glossary",
+      "route": "business-glossary",
+      "htmlFilePath": "pages/business-glossary/business-glossary.html",
+      "title": "Business Glossary",
+      "group": "Catalog & Glossary",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": true,
+      "order": 3,
+      "developmentDetails": "Domain-grouped DatBusinessGlossaryTerm directory with APPROVED / UNDER_REVIEW / DRAFT pills, linked metrics count, and Propose Term button."
+    },
+    {
+      "name": "Lineage & Impact Explorer",
+      "route": "lineage-impact",
+      "htmlFilePath": "pages/lineage-impact/lineage-impact.html",
+      "title": "Lineage & Impact Explorer",
+      "group": "Lineage & Quality",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": true,
+      "order": 4,
+      "developmentDetails": "Interactive column-level DatLineageEdge graph (Source -> ETL -> Warehouse -> BI), blast-radius simulator, and tabular lineage fallback."
+    },
+    {
+      "name": "Data Quality Rules",
+      "route": "data-quality-rules",
+      "htmlFilePath": "pages/data-quality-rules/data-quality-rules.html",
+      "title": "Data Quality Rules",
+      "group": "Lineage & Quality",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": true,
+      "order": 5,
+      "developmentDetails": "6-dimension DatDataQualityRule catalog with Decimal128 pass-rate sparklines, target asset links, and \"Run Check Now\" action."
+    },
+    {
+      "name": "Quality Incidents",
+      "route": "quality-incidents",
+      "htmlFilePath": "pages/quality-incidents/quality-incidents.html",
+      "title": "Quality Incidents",
+      "group": "Lineage & Quality",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": true,
+      "order": 6,
+      "developmentDetails": "DatQualityIncident triage board (<rapider-kanban> + synchronized table view) across OPEN -> INVESTIGATING -> MITIGATED -> RESOLVED with #activeFilterTagsBar."
+    },
+    {
+      "name": "PII Tags & RoPA Privacy",
+      "route": "classifications-privacy",
+      "htmlFilePath": "pages/classifications-privacy/classifications-privacy.html",
+      "title": "PII Tags & RoPA Privacy",
+      "group": "Privacy & Access",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": true,
+      "order": 7,
+      "developmentDetails": "DatClassificationTag taxonomy, automated PII scanner findings queue, and GDPR Article 30 Record of Processing Activities (RoPA) exportable register."
+    },
+    {
+      "name": "Masking & Access Policies",
+      "route": "access-policies",
+      "htmlFilePath": "pages/access-policies/access-policies.html",
+      "title": "Masking & Access Policies",
+      "group": "Privacy & Access",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": true,
+      "order": 8,
+      "developmentDetails": "Centralized DatDataAccessPolicy studio defining FULL_REDACT, PARTIAL_MASK_LAST4, HASH_SHA256, and row predicates pushed down to #099/#096."
+    },
+    {
+      "name": "Access & Steward Requests",
+      "route": "stewardship-requests",
+      "htmlFilePath": "pages/stewardship-requests/stewardship-requests.html",
+      "title": "Access & Steward Requests",
+      "group": "Privacy & Access",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": true,
+      "order": 9,
+      "developmentDetails": "DatStewardshipRequest ledger tracking time-bound Data Product access grants (expiresAt), glossary change requests, and linked Home WorkItem statuses."
+    },
+    {
+      "name": "Asset 360 Wiki & Column Profile",
+      "route": "catalog-asset-detail",
+      "htmlFilePath": "pages/catalog-asset-detail/catalog-asset-detail.html",
+      "title": "Asset 360 Wiki & Column Profile",
+      "group": "(Hidden)",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": false,
+      "order": 10,
+      "developmentDetails": "Rich asset detail (#/catalog-asset-detail?id=...): Business/Technical Stewards, column dictionary + PII tags, trust score breakdown, mini-lineage, \"Request Access\", and Back to Catalog."
+    },
+    {
+      "name": "Glossary Term & Linked Assets",
+      "route": "glossary-term-detail",
+      "htmlFilePath": "pages/glossary-term-detail/glossary-term-detail.html",
+      "title": "Glossary Term & Linked Assets",
+      "group": "(Hidden)",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": false,
+      "order": 11,
+      "developmentDetails": "Canonical prose definition (#/glossary-term-detail?id=...), redline revision history, inherited DatDataAccessPolicy, linked #096 metrics, and projectChannelMessage discussion."
+    },
+    {
+      "name": "Glossary, Rule & Policy Drawer",
+      "route": "governance-editor-drawer",
+      "htmlFilePath": "pages/governance-editor-drawer/governance-editor-drawer.html",
+      "title": "Glossary, Rule & Policy Drawer",
+      "group": "(Hidden)",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": false,
+      "order": 12,
+      "developmentDetails": "Sliding creation/edit drawer for DatBusinessGlossaryTerm, DatDataQualityRule, DatDataAccessPolicy, and DatStewardshipRequest; enforces finally button reset and closePageDrawer()."
+    }
+  ],
+  "workflows": [],
+  "variables": [],
+  "tools": [],
+  "pages": [
+    {
+      "name": "Governance & Trust Hub",
+      "route": "governance-posture",
+      "htmlFilePath": "pages/governance-posture/governance-posture.html",
+      "title": "Governance & Trust Hub",
+      "group": "Catalog & Glossary",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": true,
+      "order": 1,
+      "developmentDetails": "Estate trust score (Decimal128), PII scan coverage %, open DatQualityIncident summary, AI_GROUNDING_APPROVED counter, \"Ask Catalog\" drawer launcher."
+    },
+    {
+      "name": "Data Catalog & Marketplace",
+      "route": "asset-catalog",
+      "htmlFilePath": "pages/asset-catalog/asset-catalog.html",
+      "title": "Data Catalog & Marketplace",
+      "group": "Catalog & Glossary",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": true,
+      "order": 2,
+      "developmentDetails": "Faceted findSWR search over DatCatalogAssets (TABLE, SEMANTIC_MODEL, DASHBOARD, PIPELINE, SUITE_ENTITY), trust pills, #activeFilterTagsBar + Clear all, clickable asset name, icon+text Edit, icon-only Delete."
+    },
+    {
+      "name": "Business Glossary",
+      "route": "business-glossary",
+      "htmlFilePath": "pages/business-glossary/business-glossary.html",
+      "title": "Business Glossary",
+      "group": "Catalog & Glossary",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": true,
+      "order": 3,
+      "developmentDetails": "Domain-grouped DatBusinessGlossaryTerm directory with APPROVED / UNDER_REVIEW / DRAFT pills, linked metrics count, and Propose Term button."
+    },
+    {
+      "name": "Lineage & Impact Explorer",
+      "route": "lineage-impact",
+      "htmlFilePath": "pages/lineage-impact/lineage-impact.html",
+      "title": "Lineage & Impact Explorer",
+      "group": "Lineage & Quality",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": true,
+      "order": 4,
+      "developmentDetails": "Interactive column-level DatLineageEdge graph (Source -> ETL -> Warehouse -> BI), blast-radius simulator, and tabular lineage fallback."
+    },
+    {
+      "name": "Data Quality Rules",
+      "route": "data-quality-rules",
+      "htmlFilePath": "pages/data-quality-rules/data-quality-rules.html",
+      "title": "Data Quality Rules",
+      "group": "Lineage & Quality",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": true,
+      "order": 5,
+      "developmentDetails": "6-dimension DatDataQualityRule catalog with Decimal128 pass-rate sparklines, target asset links, and \"Run Check Now\" action."
+    },
+    {
+      "name": "Quality Incidents",
+      "route": "quality-incidents",
+      "htmlFilePath": "pages/quality-incidents/quality-incidents.html",
+      "title": "Quality Incidents",
+      "group": "Lineage & Quality",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": true,
+      "order": 6,
+      "developmentDetails": "DatQualityIncident triage board (<rapider-kanban> + synchronized table view) across OPEN -> INVESTIGATING -> MITIGATED -> RESOLVED with #activeFilterTagsBar."
+    },
+    {
+      "name": "PII Tags & RoPA Privacy",
+      "route": "classifications-privacy",
+      "htmlFilePath": "pages/classifications-privacy/classifications-privacy.html",
+      "title": "PII Tags & RoPA Privacy",
+      "group": "Privacy & Access",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": true,
+      "order": 7,
+      "developmentDetails": "DatClassificationTag taxonomy, automated PII scanner findings queue, and GDPR Article 30 Record of Processing Activities (RoPA) exportable register."
+    },
+    {
+      "name": "Masking & Access Policies",
+      "route": "access-policies",
+      "htmlFilePath": "pages/access-policies/access-policies.html",
+      "title": "Masking & Access Policies",
+      "group": "Privacy & Access",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": true,
+      "order": 8,
+      "developmentDetails": "Centralized DatDataAccessPolicy studio defining FULL_REDACT, PARTIAL_MASK_LAST4, HASH_SHA256, and row predicates pushed down to #099/#096."
+    },
+    {
+      "name": "Access & Steward Requests",
+      "route": "stewardship-requests",
+      "htmlFilePath": "pages/stewardship-requests/stewardship-requests.html",
+      "title": "Access & Steward Requests",
+      "group": "Privacy & Access",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": true,
+      "order": 9,
+      "developmentDetails": "DatStewardshipRequest ledger tracking time-bound Data Product access grants (expiresAt), glossary change requests, and linked Home WorkItem statuses."
+    },
+    {
+      "name": "Asset 360 Wiki & Column Profile",
+      "route": "catalog-asset-detail",
+      "htmlFilePath": "pages/catalog-asset-detail/catalog-asset-detail.html",
+      "title": "Asset 360 Wiki & Column Profile",
+      "group": "(Hidden)",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": false,
+      "order": 10,
+      "developmentDetails": "Rich asset detail (#/catalog-asset-detail?id=...): Business/Technical Stewards, column dictionary + PII tags, trust score breakdown, mini-lineage, \"Request Access\", and Back to Catalog."
+    },
+    {
+      "name": "Glossary Term & Linked Assets",
+      "route": "glossary-term-detail",
+      "htmlFilePath": "pages/glossary-term-detail/glossary-term-detail.html",
+      "title": "Glossary Term & Linked Assets",
+      "group": "(Hidden)",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": false,
+      "order": 11,
+      "developmentDetails": "Canonical prose definition (#/glossary-term-detail?id=...), redline revision history, inherited DatDataAccessPolicy, linked #096 metrics, and projectChannelMessage discussion."
+    },
+    {
+      "name": "Glossary, Rule & Policy Drawer",
+      "route": "governance-editor-drawer",
+      "htmlFilePath": "pages/governance-editor-drawer/governance-editor-drawer.html",
+      "title": "Glossary, Rule & Policy Drawer",
+      "group": "(Hidden)",
+      "icon": "fas fa-chart-bar",
+      "displayInMenu": false,
+      "order": 12,
+      "developmentDetails": "Sliding creation/edit drawer for DatBusinessGlossaryTerm, DatDataQualityRule, DatDataAccessPolicy, and DatStewardshipRequest; enforces finally button reset and closePageDrawer()."
+    }
+  ]
+}
