@@ -2885,6 +2885,142 @@
           "isHidden": false,
           "isArray": false,
           "default": false
+        },
+        {
+          "name": "recordCode",
+          "type": "string",
+          "description": "recordCode attribute for DatCatalogAsset",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "title attribute for DatCatalogAsset",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "name attribute for DatCatalogAsset",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "modelTitle",
+          "type": "string",
+          "description": "modelTitle attribute for DatCatalogAsset",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ownerName",
+          "type": "string",
+          "description": "ownerName attribute for DatCatalogAsset",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrLabel",
+          "type": "string",
+          "description": "primaryAttrLabel attribute for DatCatalogAsset",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrValue",
+          "type": "string",
+          "description": "primaryAttrValue attribute for DatCatalogAsset",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrLabel",
+          "type": "string",
+          "description": "secondaryAttrLabel attribute for DatCatalogAsset",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrValue",
+          "type": "string",
+          "description": "secondaryAttrValue attribute for DatCatalogAsset",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricLabel",
+          "type": "string",
+          "description": "metricLabel attribute for DatCatalogAsset",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricValue",
+          "type": "string",
+          "description": "metricValue attribute for DatCatalogAsset",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "operationalSummary",
+          "type": "string",
+          "description": "operationalSummary attribute for DatCatalogAsset",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "invariantRule",
+          "type": "string",
+          "description": "invariantRule attribute for DatCatalogAsset",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "crossSuiteRef",
+          "type": "string",
+          "description": "crossSuiteRef attribute for DatCatalogAsset",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "string",
+          "description": "updatedAt attribute for DatCatalogAsset",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "contactPhone",
+          "type": "string",
+          "description": "contactPhone attribute for DatCatalogAsset",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "moderationStage",
+          "type": "string",
+          "description": "moderationStage attribute for DatCatalogAsset",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
         }
       ],
       "relations": [
@@ -3085,6 +3221,134 @@
           "isHidden": false,
           "isArray": false,
           "default": false
+        },
+        {
+          "name": "recordCode",
+          "type": "string",
+          "description": "recordCode attribute for DatBusinessGlossaryTerm",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "title attribute for DatBusinessGlossaryTerm",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "modelTitle",
+          "type": "string",
+          "description": "modelTitle attribute for DatBusinessGlossaryTerm",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ownerName",
+          "type": "string",
+          "description": "ownerName attribute for DatBusinessGlossaryTerm",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrLabel",
+          "type": "string",
+          "description": "primaryAttrLabel attribute for DatBusinessGlossaryTerm",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrValue",
+          "type": "string",
+          "description": "primaryAttrValue attribute for DatBusinessGlossaryTerm",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrLabel",
+          "type": "string",
+          "description": "secondaryAttrLabel attribute for DatBusinessGlossaryTerm",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrValue",
+          "type": "string",
+          "description": "secondaryAttrValue attribute for DatBusinessGlossaryTerm",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricLabel",
+          "type": "string",
+          "description": "metricLabel attribute for DatBusinessGlossaryTerm",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricValue",
+          "type": "string",
+          "description": "metricValue attribute for DatBusinessGlossaryTerm",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "operationalSummary",
+          "type": "string",
+          "description": "operationalSummary attribute for DatBusinessGlossaryTerm",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "invariantRule",
+          "type": "string",
+          "description": "invariantRule attribute for DatBusinessGlossaryTerm",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "crossSuiteRef",
+          "type": "string",
+          "description": "crossSuiteRef attribute for DatBusinessGlossaryTerm",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "string",
+          "description": "updatedAt attribute for DatBusinessGlossaryTerm",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "contactPhone",
+          "type": "string",
+          "description": "contactPhone attribute for DatBusinessGlossaryTerm",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "moderationStage",
+          "type": "string",
+          "description": "moderationStage attribute for DatBusinessGlossaryTerm",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
         }
       ],
       "relations": [
@@ -3271,6 +3535,142 @@
           "isHidden": false,
           "isArray": false,
           "default": false
+        },
+        {
+          "name": "recordCode",
+          "type": "string",
+          "description": "recordCode attribute for DatLineageEdge",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "title attribute for DatLineageEdge",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "name attribute for DatLineageEdge",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "modelTitle",
+          "type": "string",
+          "description": "modelTitle attribute for DatLineageEdge",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ownerName",
+          "type": "string",
+          "description": "ownerName attribute for DatLineageEdge",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrLabel",
+          "type": "string",
+          "description": "primaryAttrLabel attribute for DatLineageEdge",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrValue",
+          "type": "string",
+          "description": "primaryAttrValue attribute for DatLineageEdge",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrLabel",
+          "type": "string",
+          "description": "secondaryAttrLabel attribute for DatLineageEdge",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrValue",
+          "type": "string",
+          "description": "secondaryAttrValue attribute for DatLineageEdge",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricLabel",
+          "type": "string",
+          "description": "metricLabel attribute for DatLineageEdge",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricValue",
+          "type": "string",
+          "description": "metricValue attribute for DatLineageEdge",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "operationalSummary",
+          "type": "string",
+          "description": "operationalSummary attribute for DatLineageEdge",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "invariantRule",
+          "type": "string",
+          "description": "invariantRule attribute for DatLineageEdge",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "crossSuiteRef",
+          "type": "string",
+          "description": "crossSuiteRef attribute for DatLineageEdge",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "string",
+          "description": "updatedAt attribute for DatLineageEdge",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "contactPhone",
+          "type": "string",
+          "description": "contactPhone attribute for DatLineageEdge",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "moderationStage",
+          "type": "string",
+          "description": "moderationStage attribute for DatLineageEdge",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
         }
       ],
       "relations": [
@@ -3504,6 +3904,134 @@
           "isHidden": false,
           "isArray": false,
           "default": false
+        },
+        {
+          "name": "recordCode",
+          "type": "string",
+          "description": "recordCode attribute for DatDataQualityRule",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "title attribute for DatDataQualityRule",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "modelTitle",
+          "type": "string",
+          "description": "modelTitle attribute for DatDataQualityRule",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ownerName",
+          "type": "string",
+          "description": "ownerName attribute for DatDataQualityRule",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrLabel",
+          "type": "string",
+          "description": "primaryAttrLabel attribute for DatDataQualityRule",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrValue",
+          "type": "string",
+          "description": "primaryAttrValue attribute for DatDataQualityRule",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrLabel",
+          "type": "string",
+          "description": "secondaryAttrLabel attribute for DatDataQualityRule",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrValue",
+          "type": "string",
+          "description": "secondaryAttrValue attribute for DatDataQualityRule",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricLabel",
+          "type": "string",
+          "description": "metricLabel attribute for DatDataQualityRule",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricValue",
+          "type": "string",
+          "description": "metricValue attribute for DatDataQualityRule",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "operationalSummary",
+          "type": "string",
+          "description": "operationalSummary attribute for DatDataQualityRule",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "invariantRule",
+          "type": "string",
+          "description": "invariantRule attribute for DatDataQualityRule",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "crossSuiteRef",
+          "type": "string",
+          "description": "crossSuiteRef attribute for DatDataQualityRule",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "string",
+          "description": "updatedAt attribute for DatDataQualityRule",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "contactPhone",
+          "type": "string",
+          "description": "contactPhone attribute for DatDataQualityRule",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "moderationStage",
+          "type": "string",
+          "description": "moderationStage attribute for DatDataQualityRule",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
         }
       ],
       "relations": [
@@ -3742,6 +4270,142 @@
           "isHidden": false,
           "isArray": false,
           "default": false
+        },
+        {
+          "name": "recordCode",
+          "type": "string",
+          "description": "recordCode attribute for DatQualityIncident",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "title attribute for DatQualityIncident",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "name attribute for DatQualityIncident",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "modelTitle",
+          "type": "string",
+          "description": "modelTitle attribute for DatQualityIncident",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ownerName",
+          "type": "string",
+          "description": "ownerName attribute for DatQualityIncident",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrLabel",
+          "type": "string",
+          "description": "primaryAttrLabel attribute for DatQualityIncident",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrValue",
+          "type": "string",
+          "description": "primaryAttrValue attribute for DatQualityIncident",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrLabel",
+          "type": "string",
+          "description": "secondaryAttrLabel attribute for DatQualityIncident",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrValue",
+          "type": "string",
+          "description": "secondaryAttrValue attribute for DatQualityIncident",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricLabel",
+          "type": "string",
+          "description": "metricLabel attribute for DatQualityIncident",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricValue",
+          "type": "string",
+          "description": "metricValue attribute for DatQualityIncident",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "operationalSummary",
+          "type": "string",
+          "description": "operationalSummary attribute for DatQualityIncident",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "invariantRule",
+          "type": "string",
+          "description": "invariantRule attribute for DatQualityIncident",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "crossSuiteRef",
+          "type": "string",
+          "description": "crossSuiteRef attribute for DatQualityIncident",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "string",
+          "description": "updatedAt attribute for DatQualityIncident",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "contactPhone",
+          "type": "string",
+          "description": "contactPhone attribute for DatQualityIncident",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "moderationStage",
+          "type": "string",
+          "description": "moderationStage attribute for DatQualityIncident",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
         }
       ],
       "relations": [
@@ -3925,6 +4589,134 @@
           "isHidden": false,
           "isArray": false,
           "default": false
+        },
+        {
+          "name": "recordCode",
+          "type": "string",
+          "description": "recordCode attribute for DatClassificationTag",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "title attribute for DatClassificationTag",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "modelTitle",
+          "type": "string",
+          "description": "modelTitle attribute for DatClassificationTag",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ownerName",
+          "type": "string",
+          "description": "ownerName attribute for DatClassificationTag",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrLabel",
+          "type": "string",
+          "description": "primaryAttrLabel attribute for DatClassificationTag",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrValue",
+          "type": "string",
+          "description": "primaryAttrValue attribute for DatClassificationTag",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrLabel",
+          "type": "string",
+          "description": "secondaryAttrLabel attribute for DatClassificationTag",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrValue",
+          "type": "string",
+          "description": "secondaryAttrValue attribute for DatClassificationTag",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricLabel",
+          "type": "string",
+          "description": "metricLabel attribute for DatClassificationTag",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricValue",
+          "type": "string",
+          "description": "metricValue attribute for DatClassificationTag",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "operationalSummary",
+          "type": "string",
+          "description": "operationalSummary attribute for DatClassificationTag",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "invariantRule",
+          "type": "string",
+          "description": "invariantRule attribute for DatClassificationTag",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "crossSuiteRef",
+          "type": "string",
+          "description": "crossSuiteRef attribute for DatClassificationTag",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "string",
+          "description": "updatedAt attribute for DatClassificationTag",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "contactPhone",
+          "type": "string",
+          "description": "contactPhone attribute for DatClassificationTag",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "moderationStage",
+          "type": "string",
+          "description": "moderationStage attribute for DatClassificationTag",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
         }
       ],
       "relations": [
@@ -4128,6 +4920,134 @@
           "isHidden": false,
           "isArray": false,
           "default": false
+        },
+        {
+          "name": "recordCode",
+          "type": "string",
+          "description": "recordCode attribute for DatDataAccessPolicy",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "title attribute for DatDataAccessPolicy",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "modelTitle",
+          "type": "string",
+          "description": "modelTitle attribute for DatDataAccessPolicy",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ownerName",
+          "type": "string",
+          "description": "ownerName attribute for DatDataAccessPolicy",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrLabel",
+          "type": "string",
+          "description": "primaryAttrLabel attribute for DatDataAccessPolicy",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrValue",
+          "type": "string",
+          "description": "primaryAttrValue attribute for DatDataAccessPolicy",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrLabel",
+          "type": "string",
+          "description": "secondaryAttrLabel attribute for DatDataAccessPolicy",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrValue",
+          "type": "string",
+          "description": "secondaryAttrValue attribute for DatDataAccessPolicy",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricLabel",
+          "type": "string",
+          "description": "metricLabel attribute for DatDataAccessPolicy",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricValue",
+          "type": "string",
+          "description": "metricValue attribute for DatDataAccessPolicy",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "operationalSummary",
+          "type": "string",
+          "description": "operationalSummary attribute for DatDataAccessPolicy",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "invariantRule",
+          "type": "string",
+          "description": "invariantRule attribute for DatDataAccessPolicy",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "crossSuiteRef",
+          "type": "string",
+          "description": "crossSuiteRef attribute for DatDataAccessPolicy",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "string",
+          "description": "updatedAt attribute for DatDataAccessPolicy",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "contactPhone",
+          "type": "string",
+          "description": "contactPhone attribute for DatDataAccessPolicy",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "moderationStage",
+          "type": "string",
+          "description": "moderationStage attribute for DatDataAccessPolicy",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
         }
       ],
       "relations": [
@@ -4350,6 +5270,142 @@
           "isHidden": false,
           "isArray": false,
           "default": false
+        },
+        {
+          "name": "recordCode",
+          "type": "string",
+          "description": "recordCode attribute for DatStewardshipRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "title attribute for DatStewardshipRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "name attribute for DatStewardshipRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "modelTitle",
+          "type": "string",
+          "description": "modelTitle attribute for DatStewardshipRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ownerName",
+          "type": "string",
+          "description": "ownerName attribute for DatStewardshipRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrLabel",
+          "type": "string",
+          "description": "primaryAttrLabel attribute for DatStewardshipRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrValue",
+          "type": "string",
+          "description": "primaryAttrValue attribute for DatStewardshipRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrLabel",
+          "type": "string",
+          "description": "secondaryAttrLabel attribute for DatStewardshipRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrValue",
+          "type": "string",
+          "description": "secondaryAttrValue attribute for DatStewardshipRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricLabel",
+          "type": "string",
+          "description": "metricLabel attribute for DatStewardshipRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricValue",
+          "type": "string",
+          "description": "metricValue attribute for DatStewardshipRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "operationalSummary",
+          "type": "string",
+          "description": "operationalSummary attribute for DatStewardshipRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "invariantRule",
+          "type": "string",
+          "description": "invariantRule attribute for DatStewardshipRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "crossSuiteRef",
+          "type": "string",
+          "description": "crossSuiteRef attribute for DatStewardshipRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "string",
+          "description": "updatedAt attribute for DatStewardshipRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "contactPhone",
+          "type": "string",
+          "description": "contactPhone attribute for DatStewardshipRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "moderationStage",
+          "type": "string",
+          "description": "moderationStage attribute for DatStewardshipRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
         }
       ],
       "relations": [
@@ -4371,133 +5427,181 @@
       "name": "Governance & Trust Hub",
       "route": "governance-posture",
       "htmlFilePath": "pages/governance-posture/governance-posture.html",
-      "title": "Governance & Trust Hub",
+      "title": "Catalog & Glossary",
       "group": "Catalog & Glossary",
       "icon": "fas fa-chart-bar",
       "displayInMenu": true,
       "order": 1,
-      "developmentDetails": "Estate trust score (Decimal128), PII scan coverage %, open DatQualityIncident summary, AI_GROUNDING_APPROVED counter, \"Ask Catalog\" drawer launcher."
+      "developmentDetails": "Estate trust score (Decimal128), PII scan coverage %, open DatQualityIncident summary, AI_GROUNDING_APPROVED counter, \"Ask Catalog\" drawer launcher.",
+      "pageTitle": "Governance & Trust Hub",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "Estate trust score (Decimal128), PII scan coverage %, open DatQualityIncident summary, AI_GROUNDING_APPROVED counter, \"Ask Catalog\" drawer launcher."
     },
     {
       "name": "Data Catalog & Marketplace",
       "route": "asset-catalog",
       "htmlFilePath": "pages/asset-catalog/asset-catalog.html",
-      "title": "Data Catalog & Marketplace",
+      "title": "Catalog & Glossary",
       "group": "Catalog & Glossary",
       "icon": "fas fa-chart-bar",
       "displayInMenu": true,
       "order": 2,
-      "developmentDetails": "Faceted findSWR search over DatCatalogAssets (TABLE, SEMANTIC_MODEL, DASHBOARD, PIPELINE, SUITE_ENTITY), trust pills, #activeFilterTagsBar + Clear all, clickable asset name, icon+text Edit, icon-only Delete."
+      "developmentDetails": "Faceted findSWR search over DatCatalogAssets (TABLE, SEMANTIC_MODEL, DASHBOARD, PIPELINE, SUITE_ENTITY), trust pills, #activeFilterTagsBar + Clear all, clickable asset name, icon+text Edit, icon-only Delete.",
+      "pageTitle": "Data Catalog & Marketplace",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "Faceted findSWR search over DatCatalogAssets (TABLE, SEMANTIC_MODEL, DASHBOARD, PIPELINE, SUITE_ENTITY), trust pills, #activeFilterTagsBar + Clear all, clickable asset name, icon+text Edit, icon-only Delete."
     },
     {
       "name": "Business Glossary",
       "route": "business-glossary",
       "htmlFilePath": "pages/business-glossary/business-glossary.html",
-      "title": "Business Glossary",
+      "title": "Catalog & Glossary",
       "group": "Catalog & Glossary",
       "icon": "fas fa-chart-bar",
       "displayInMenu": true,
       "order": 3,
-      "developmentDetails": "Domain-grouped DatBusinessGlossaryTerm directory with APPROVED / UNDER_REVIEW / DRAFT pills, linked metrics count, and Propose Term button."
+      "developmentDetails": "Domain-grouped DatBusinessGlossaryTerm directory with APPROVED / UNDER_REVIEW / DRAFT pills, linked metrics count, and Propose Term button.",
+      "pageTitle": "Business Glossary",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "Domain-grouped DatBusinessGlossaryTerm directory with APPROVED / UNDER_REVIEW / DRAFT pills, linked metrics count, and Propose Term button."
     },
     {
       "name": "Lineage & Impact Explorer",
       "route": "lineage-impact",
       "htmlFilePath": "pages/lineage-impact/lineage-impact.html",
-      "title": "Lineage & Impact Explorer",
+      "title": "Lineage & Quality",
       "group": "Lineage & Quality",
       "icon": "fas fa-chart-bar",
       "displayInMenu": true,
       "order": 4,
-      "developmentDetails": "Interactive column-level DatLineageEdge graph (Source -> ETL -> Warehouse -> BI), blast-radius simulator, and tabular lineage fallback."
+      "developmentDetails": "Interactive column-level DatLineageEdge graph (Source -> ETL -> Warehouse -> BI), blast-radius simulator, and tabular lineage fallback.",
+      "pageTitle": "Lineage & Impact Explorer",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "Interactive column-level DatLineageEdge graph (Source -> ETL -> Warehouse -> BI), blast-radius simulator, and tabular lineage fallback."
     },
     {
       "name": "Data Quality Rules",
       "route": "data-quality-rules",
       "htmlFilePath": "pages/data-quality-rules/data-quality-rules.html",
-      "title": "Data Quality Rules",
+      "title": "Lineage & Quality",
       "group": "Lineage & Quality",
       "icon": "fas fa-chart-bar",
       "displayInMenu": true,
       "order": 5,
-      "developmentDetails": "6-dimension DatDataQualityRule catalog with Decimal128 pass-rate sparklines, target asset links, and \"Run Check Now\" action."
+      "developmentDetails": "6-dimension DatDataQualityRule catalog with Decimal128 pass-rate sparklines, target asset links, and \"Run Check Now\" action.",
+      "pageTitle": "Data Quality Rules",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "6-dimension DatDataQualityRule catalog with Decimal128 pass-rate sparklines, target asset links, and \"Run Check Now\" action."
     },
     {
       "name": "Quality Incidents",
       "route": "quality-incidents",
       "htmlFilePath": "pages/quality-incidents/quality-incidents.html",
-      "title": "Quality Incidents",
+      "title": "Lineage & Quality",
       "group": "Lineage & Quality",
       "icon": "fas fa-chart-bar",
       "displayInMenu": true,
       "order": 6,
-      "developmentDetails": "DatQualityIncident triage board (<rapider-kanban> + synchronized table view) across OPEN -> INVESTIGATING -> MITIGATED -> RESOLVED with #activeFilterTagsBar."
+      "developmentDetails": "DatQualityIncident triage board (<rapider-kanban> + synchronized table view) across OPEN -> INVESTIGATING -> MITIGATED -> RESOLVED with #activeFilterTagsBar.",
+      "pageTitle": "Quality Incidents",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "DatQualityIncident triage board (<rapider-kanban> + synchronized table view) across OPEN -> INVESTIGATING -> MITIGATED -> RESOLVED with #activeFilterTagsBar."
     },
     {
       "name": "PII Tags & RoPA Privacy",
       "route": "classifications-privacy",
       "htmlFilePath": "pages/classifications-privacy/classifications-privacy.html",
-      "title": "PII Tags & RoPA Privacy",
+      "title": "Privacy & Access",
       "group": "Privacy & Access",
       "icon": "fas fa-chart-bar",
       "displayInMenu": true,
       "order": 7,
-      "developmentDetails": "DatClassificationTag taxonomy, automated PII scanner findings queue, and GDPR Article 30 Record of Processing Activities (RoPA) exportable register."
+      "developmentDetails": "DatClassificationTag taxonomy, automated PII scanner findings queue, and GDPR Article 30 Record of Processing Activities (RoPA) exportable register.",
+      "pageTitle": "PII Tags & RoPA Privacy",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "DatClassificationTag taxonomy, automated PII scanner findings queue, and GDPR Article 30 Record of Processing Activities (RoPA) exportable register."
     },
     {
       "name": "Masking & Access Policies",
       "route": "access-policies",
       "htmlFilePath": "pages/access-policies/access-policies.html",
-      "title": "Masking & Access Policies",
+      "title": "Privacy & Access",
       "group": "Privacy & Access",
       "icon": "fas fa-chart-bar",
       "displayInMenu": true,
       "order": 8,
-      "developmentDetails": "Centralized DatDataAccessPolicy studio defining FULL_REDACT, PARTIAL_MASK_LAST4, HASH_SHA256, and row predicates pushed down to #099/#096."
+      "developmentDetails": "Centralized DatDataAccessPolicy studio defining FULL_REDACT, PARTIAL_MASK_LAST4, HASH_SHA256, and row predicates pushed down to #099/#096.",
+      "pageTitle": "Masking & Access Policies",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "Centralized DatDataAccessPolicy studio defining FULL_REDACT, PARTIAL_MASK_LAST4, HASH_SHA256, and row predicates pushed down to #099/#096."
     },
     {
       "name": "Access & Steward Requests",
       "route": "stewardship-requests",
       "htmlFilePath": "pages/stewardship-requests/stewardship-requests.html",
-      "title": "Access & Steward Requests",
+      "title": "Privacy & Access",
       "group": "Privacy & Access",
       "icon": "fas fa-chart-bar",
       "displayInMenu": true,
       "order": 9,
-      "developmentDetails": "DatStewardshipRequest ledger tracking time-bound Data Product access grants (expiresAt), glossary change requests, and linked Home WorkItem statuses."
+      "developmentDetails": "DatStewardshipRequest ledger tracking time-bound Data Product access grants (expiresAt), glossary change requests, and linked Home WorkItem statuses.",
+      "pageTitle": "Access & Steward Requests",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "DatStewardshipRequest ledger tracking time-bound Data Product access grants (expiresAt), glossary change requests, and linked Home WorkItem statuses."
     },
     {
       "name": "Asset 360 Wiki & Column Profile",
       "route": "catalog-asset-detail",
       "htmlFilePath": "pages/catalog-asset-detail/catalog-asset-detail.html",
-      "title": "Asset 360 Wiki & Column Profile",
-      "group": "(Hidden)",
+      "title": "*(Hidden)*",
+      "group": "*(Hidden)*",
       "icon": "fas fa-chart-bar",
       "displayInMenu": false,
       "order": 10,
-      "developmentDetails": "Rich asset detail (#/catalog-asset-detail?id=...): Business/Technical Stewards, column dictionary + PII tags, trust score breakdown, mini-lineage, \"Request Access\", and Back to Catalog."
+      "developmentDetails": "Rich asset detail (#/catalog-asset-detail?id=...): Business/Technical Stewards, column dictionary + PII tags, trust score breakdown, mini-lineage, \"Request Access\", and Back to Catalog.",
+      "pageTitle": "Asset 360 Wiki & Column Profile",
+      "type": "AppPage",
+      "displayOnMenu": false,
+      "description": "Rich asset detail (#/catalog-asset-detail?id=...): Business/Technical Stewards, column dictionary + PII tags, trust score breakdown, mini-lineage, \"Request Access\", and Back to Catalog."
     },
     {
       "name": "Glossary Term & Linked Assets",
       "route": "glossary-term-detail",
       "htmlFilePath": "pages/glossary-term-detail/glossary-term-detail.html",
-      "title": "Glossary Term & Linked Assets",
-      "group": "(Hidden)",
+      "title": "*(Hidden)*",
+      "group": "*(Hidden)*",
       "icon": "fas fa-chart-bar",
       "displayInMenu": false,
       "order": 11,
-      "developmentDetails": "Canonical prose definition (#/glossary-term-detail?id=...), redline revision history, inherited DatDataAccessPolicy, linked #096 metrics, and projectChannelMessage discussion."
+      "developmentDetails": "Canonical prose definition (#/glossary-term-detail?id=...), redline revision history, inherited DatDataAccessPolicy, linked #096 metrics, and projectChannelMessage discussion.",
+      "pageTitle": "Glossary Term & Linked Assets",
+      "type": "AppPage",
+      "displayOnMenu": false,
+      "description": "Canonical prose definition (#/glossary-term-detail?id=...), redline revision history, inherited DatDataAccessPolicy, linked #096 metrics, and projectChannelMessage discussion."
     },
     {
       "name": "Glossary, Rule & Policy Drawer",
       "route": "governance-editor-drawer",
       "htmlFilePath": "pages/governance-editor-drawer/governance-editor-drawer.html",
-      "title": "Glossary, Rule & Policy Drawer",
-      "group": "(Hidden)",
+      "title": "*(Hidden)*",
+      "group": "*(Hidden)*",
       "icon": "fas fa-chart-bar",
       "displayInMenu": false,
       "order": 12,
-      "developmentDetails": "Sliding creation/edit drawer for DatBusinessGlossaryTerm, DatDataQualityRule, DatDataAccessPolicy, and DatStewardshipRequest; enforces finally button reset and closePageDrawer()."
+      "developmentDetails": "Sliding creation/edit drawer for DatBusinessGlossaryTerm, DatDataQualityRule, DatDataAccessPolicy, and DatStewardshipRequest; enforces finally button reset and closePageDrawer().",
+      "pageTitle": "Glossary, Rule & Policy Drawer",
+      "type": "AppPage",
+      "displayOnMenu": false,
+      "description": "Sliding creation/edit drawer for DatBusinessGlossaryTerm, DatDataQualityRule, DatDataAccessPolicy, and DatStewardshipRequest; enforces finally button reset and closePageDrawer()."
     }
   ],
   "workflows": [],
@@ -4508,133 +5612,181 @@
       "name": "Governance & Trust Hub",
       "route": "governance-posture",
       "htmlFilePath": "pages/governance-posture/governance-posture.html",
-      "title": "Governance & Trust Hub",
+      "title": "Catalog & Glossary",
       "group": "Catalog & Glossary",
       "icon": "fas fa-chart-bar",
       "displayInMenu": true,
       "order": 1,
-      "developmentDetails": "Estate trust score (Decimal128), PII scan coverage %, open DatQualityIncident summary, AI_GROUNDING_APPROVED counter, \"Ask Catalog\" drawer launcher."
+      "developmentDetails": "Estate trust score (Decimal128), PII scan coverage %, open DatQualityIncident summary, AI_GROUNDING_APPROVED counter, \"Ask Catalog\" drawer launcher.",
+      "pageTitle": "Governance & Trust Hub",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "Estate trust score (Decimal128), PII scan coverage %, open DatQualityIncident summary, AI_GROUNDING_APPROVED counter, \"Ask Catalog\" drawer launcher."
     },
     {
       "name": "Data Catalog & Marketplace",
       "route": "asset-catalog",
       "htmlFilePath": "pages/asset-catalog/asset-catalog.html",
-      "title": "Data Catalog & Marketplace",
+      "title": "Catalog & Glossary",
       "group": "Catalog & Glossary",
       "icon": "fas fa-chart-bar",
       "displayInMenu": true,
       "order": 2,
-      "developmentDetails": "Faceted findSWR search over DatCatalogAssets (TABLE, SEMANTIC_MODEL, DASHBOARD, PIPELINE, SUITE_ENTITY), trust pills, #activeFilterTagsBar + Clear all, clickable asset name, icon+text Edit, icon-only Delete."
+      "developmentDetails": "Faceted findSWR search over DatCatalogAssets (TABLE, SEMANTIC_MODEL, DASHBOARD, PIPELINE, SUITE_ENTITY), trust pills, #activeFilterTagsBar + Clear all, clickable asset name, icon+text Edit, icon-only Delete.",
+      "pageTitle": "Data Catalog & Marketplace",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "Faceted findSWR search over DatCatalogAssets (TABLE, SEMANTIC_MODEL, DASHBOARD, PIPELINE, SUITE_ENTITY), trust pills, #activeFilterTagsBar + Clear all, clickable asset name, icon+text Edit, icon-only Delete."
     },
     {
       "name": "Business Glossary",
       "route": "business-glossary",
       "htmlFilePath": "pages/business-glossary/business-glossary.html",
-      "title": "Business Glossary",
+      "title": "Catalog & Glossary",
       "group": "Catalog & Glossary",
       "icon": "fas fa-chart-bar",
       "displayInMenu": true,
       "order": 3,
-      "developmentDetails": "Domain-grouped DatBusinessGlossaryTerm directory with APPROVED / UNDER_REVIEW / DRAFT pills, linked metrics count, and Propose Term button."
+      "developmentDetails": "Domain-grouped DatBusinessGlossaryTerm directory with APPROVED / UNDER_REVIEW / DRAFT pills, linked metrics count, and Propose Term button.",
+      "pageTitle": "Business Glossary",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "Domain-grouped DatBusinessGlossaryTerm directory with APPROVED / UNDER_REVIEW / DRAFT pills, linked metrics count, and Propose Term button."
     },
     {
       "name": "Lineage & Impact Explorer",
       "route": "lineage-impact",
       "htmlFilePath": "pages/lineage-impact/lineage-impact.html",
-      "title": "Lineage & Impact Explorer",
+      "title": "Lineage & Quality",
       "group": "Lineage & Quality",
       "icon": "fas fa-chart-bar",
       "displayInMenu": true,
       "order": 4,
-      "developmentDetails": "Interactive column-level DatLineageEdge graph (Source -> ETL -> Warehouse -> BI), blast-radius simulator, and tabular lineage fallback."
+      "developmentDetails": "Interactive column-level DatLineageEdge graph (Source -> ETL -> Warehouse -> BI), blast-radius simulator, and tabular lineage fallback.",
+      "pageTitle": "Lineage & Impact Explorer",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "Interactive column-level DatLineageEdge graph (Source -> ETL -> Warehouse -> BI), blast-radius simulator, and tabular lineage fallback."
     },
     {
       "name": "Data Quality Rules",
       "route": "data-quality-rules",
       "htmlFilePath": "pages/data-quality-rules/data-quality-rules.html",
-      "title": "Data Quality Rules",
+      "title": "Lineage & Quality",
       "group": "Lineage & Quality",
       "icon": "fas fa-chart-bar",
       "displayInMenu": true,
       "order": 5,
-      "developmentDetails": "6-dimension DatDataQualityRule catalog with Decimal128 pass-rate sparklines, target asset links, and \"Run Check Now\" action."
+      "developmentDetails": "6-dimension DatDataQualityRule catalog with Decimal128 pass-rate sparklines, target asset links, and \"Run Check Now\" action.",
+      "pageTitle": "Data Quality Rules",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "6-dimension DatDataQualityRule catalog with Decimal128 pass-rate sparklines, target asset links, and \"Run Check Now\" action."
     },
     {
       "name": "Quality Incidents",
       "route": "quality-incidents",
       "htmlFilePath": "pages/quality-incidents/quality-incidents.html",
-      "title": "Quality Incidents",
+      "title": "Lineage & Quality",
       "group": "Lineage & Quality",
       "icon": "fas fa-chart-bar",
       "displayInMenu": true,
       "order": 6,
-      "developmentDetails": "DatQualityIncident triage board (<rapider-kanban> + synchronized table view) across OPEN -> INVESTIGATING -> MITIGATED -> RESOLVED with #activeFilterTagsBar."
+      "developmentDetails": "DatQualityIncident triage board (<rapider-kanban> + synchronized table view) across OPEN -> INVESTIGATING -> MITIGATED -> RESOLVED with #activeFilterTagsBar.",
+      "pageTitle": "Quality Incidents",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "DatQualityIncident triage board (<rapider-kanban> + synchronized table view) across OPEN -> INVESTIGATING -> MITIGATED -> RESOLVED with #activeFilterTagsBar."
     },
     {
       "name": "PII Tags & RoPA Privacy",
       "route": "classifications-privacy",
       "htmlFilePath": "pages/classifications-privacy/classifications-privacy.html",
-      "title": "PII Tags & RoPA Privacy",
+      "title": "Privacy & Access",
       "group": "Privacy & Access",
       "icon": "fas fa-chart-bar",
       "displayInMenu": true,
       "order": 7,
-      "developmentDetails": "DatClassificationTag taxonomy, automated PII scanner findings queue, and GDPR Article 30 Record of Processing Activities (RoPA) exportable register."
+      "developmentDetails": "DatClassificationTag taxonomy, automated PII scanner findings queue, and GDPR Article 30 Record of Processing Activities (RoPA) exportable register.",
+      "pageTitle": "PII Tags & RoPA Privacy",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "DatClassificationTag taxonomy, automated PII scanner findings queue, and GDPR Article 30 Record of Processing Activities (RoPA) exportable register."
     },
     {
       "name": "Masking & Access Policies",
       "route": "access-policies",
       "htmlFilePath": "pages/access-policies/access-policies.html",
-      "title": "Masking & Access Policies",
+      "title": "Privacy & Access",
       "group": "Privacy & Access",
       "icon": "fas fa-chart-bar",
       "displayInMenu": true,
       "order": 8,
-      "developmentDetails": "Centralized DatDataAccessPolicy studio defining FULL_REDACT, PARTIAL_MASK_LAST4, HASH_SHA256, and row predicates pushed down to #099/#096."
+      "developmentDetails": "Centralized DatDataAccessPolicy studio defining FULL_REDACT, PARTIAL_MASK_LAST4, HASH_SHA256, and row predicates pushed down to #099/#096.",
+      "pageTitle": "Masking & Access Policies",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "Centralized DatDataAccessPolicy studio defining FULL_REDACT, PARTIAL_MASK_LAST4, HASH_SHA256, and row predicates pushed down to #099/#096."
     },
     {
       "name": "Access & Steward Requests",
       "route": "stewardship-requests",
       "htmlFilePath": "pages/stewardship-requests/stewardship-requests.html",
-      "title": "Access & Steward Requests",
+      "title": "Privacy & Access",
       "group": "Privacy & Access",
       "icon": "fas fa-chart-bar",
       "displayInMenu": true,
       "order": 9,
-      "developmentDetails": "DatStewardshipRequest ledger tracking time-bound Data Product access grants (expiresAt), glossary change requests, and linked Home WorkItem statuses."
+      "developmentDetails": "DatStewardshipRequest ledger tracking time-bound Data Product access grants (expiresAt), glossary change requests, and linked Home WorkItem statuses.",
+      "pageTitle": "Access & Steward Requests",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "DatStewardshipRequest ledger tracking time-bound Data Product access grants (expiresAt), glossary change requests, and linked Home WorkItem statuses."
     },
     {
       "name": "Asset 360 Wiki & Column Profile",
       "route": "catalog-asset-detail",
       "htmlFilePath": "pages/catalog-asset-detail/catalog-asset-detail.html",
-      "title": "Asset 360 Wiki & Column Profile",
-      "group": "(Hidden)",
+      "title": "*(Hidden)*",
+      "group": "*(Hidden)*",
       "icon": "fas fa-chart-bar",
       "displayInMenu": false,
       "order": 10,
-      "developmentDetails": "Rich asset detail (#/catalog-asset-detail?id=...): Business/Technical Stewards, column dictionary + PII tags, trust score breakdown, mini-lineage, \"Request Access\", and Back to Catalog."
+      "developmentDetails": "Rich asset detail (#/catalog-asset-detail?id=...): Business/Technical Stewards, column dictionary + PII tags, trust score breakdown, mini-lineage, \"Request Access\", and Back to Catalog.",
+      "pageTitle": "Asset 360 Wiki & Column Profile",
+      "type": "AppPage",
+      "displayOnMenu": false,
+      "description": "Rich asset detail (#/catalog-asset-detail?id=...): Business/Technical Stewards, column dictionary + PII tags, trust score breakdown, mini-lineage, \"Request Access\", and Back to Catalog."
     },
     {
       "name": "Glossary Term & Linked Assets",
       "route": "glossary-term-detail",
       "htmlFilePath": "pages/glossary-term-detail/glossary-term-detail.html",
-      "title": "Glossary Term & Linked Assets",
-      "group": "(Hidden)",
+      "title": "*(Hidden)*",
+      "group": "*(Hidden)*",
       "icon": "fas fa-chart-bar",
       "displayInMenu": false,
       "order": 11,
-      "developmentDetails": "Canonical prose definition (#/glossary-term-detail?id=...), redline revision history, inherited DatDataAccessPolicy, linked #096 metrics, and projectChannelMessage discussion."
+      "developmentDetails": "Canonical prose definition (#/glossary-term-detail?id=...), redline revision history, inherited DatDataAccessPolicy, linked #096 metrics, and projectChannelMessage discussion.",
+      "pageTitle": "Glossary Term & Linked Assets",
+      "type": "AppPage",
+      "displayOnMenu": false,
+      "description": "Canonical prose definition (#/glossary-term-detail?id=...), redline revision history, inherited DatDataAccessPolicy, linked #096 metrics, and projectChannelMessage discussion."
     },
     {
       "name": "Glossary, Rule & Policy Drawer",
       "route": "governance-editor-drawer",
       "htmlFilePath": "pages/governance-editor-drawer/governance-editor-drawer.html",
-      "title": "Glossary, Rule & Policy Drawer",
-      "group": "(Hidden)",
+      "title": "*(Hidden)*",
+      "group": "*(Hidden)*",
       "icon": "fas fa-chart-bar",
       "displayInMenu": false,
       "order": 12,
-      "developmentDetails": "Sliding creation/edit drawer for DatBusinessGlossaryTerm, DatDataQualityRule, DatDataAccessPolicy, and DatStewardshipRequest; enforces finally button reset and closePageDrawer()."
+      "developmentDetails": "Sliding creation/edit drawer for DatBusinessGlossaryTerm, DatDataQualityRule, DatDataAccessPolicy, and DatStewardshipRequest; enforces finally button reset and closePageDrawer().",
+      "pageTitle": "Glossary, Rule & Policy Drawer",
+      "type": "AppPage",
+      "displayOnMenu": false,
+      "description": "Sliding creation/edit drawer for DatBusinessGlossaryTerm, DatDataQualityRule, DatDataAccessPolicy, and DatStewardshipRequest; enforces finally button reset and closePageDrawer()."
     }
   ]
 }
